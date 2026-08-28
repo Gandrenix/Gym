@@ -1,0 +1,153 @@
+/* ==========================================================================
+   POWERZONE - ANIMACIONES Y EFECTOS VISUALES (KEYFRAMES & MICRO-INTERACTIONS)
+   ========================================================================== */
+
+@keyframes pulse-neon {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(204, 255, 0, 0.35);
+    border-color: rgba(204, 255, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(204, 255, 0, 0.7);
+    border-color: rgba(204, 255, 0, 0.85);
+  }
+}
+
+@keyframes pulse-hotspot {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: 0 0 12px var(--neon-lime);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.15);
+    box-shadow: 0 0 24px var(--neon-lime), 0 0 40px var(--neon-lime);
+  }
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes float-hud {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(0.5deg);
+  }
+}
+
+@keyframes glow-bar {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px rgba(204, 255, 0, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 12px rgba(204, 255, 0, 0.8));
+  }
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(1000%);
+  }
+}
+
+/* Helper animation classes */
+.anim-float {
+  animation: float-slow 4s ease-in-out infinite;
+}
+
+.anim-hud-float {
+  animation: float-hud 6s ease-in-out infinite;
+}
+
+.anim-pulse {
+  animation: pulse-neon 3s infinite ease-in-out;
+}
+
+.anim-glow {
+  animation: glow-bar 2.5s infinite ease-in-out;
+}
+
+/* Tooltip on hotspot */
+.hotspot-tooltip {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: rgba(10, 10, 10, 0.95);
+  border: 1px solid var(--neon-lime);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-weight: 800;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.25s ease;
+  box-shadow: 0 0 15px rgba(204, 255, 0, 0.3);
+  z-index: 10;
+}
+
+.hotspot-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: var(--neon-lime);
+}
+
+.gym-hotspot:hover .hotspot-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Toast notification */
+.toast-notice {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #111;
+  border: 1px solid var(--neon-lime);
+  box-shadow: 0 0 25px rgba(204, 255, 0, 0.3);
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  z-index: 3000;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.35s cubic-bezier(0.1, 0.8, 0.2, 1);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toast-notice.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.toast-notice i {
+  color: var(--neon-lime);
+  font-size: 1.1rem;
+}

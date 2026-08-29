@@ -1,0 +1,1774 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POWERZONE ⚡ | Centro de Alto Rendimiento & Entrenamiento Biomecánico</title>
+  <meta name="description" content="POWERZONE: Sistema de alto rendimiento impulsado por ciencia deportiva, entrenamiento biomecánico y comunidad de élite.">
+  
+  <!-- Modern Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div class="preloader" id="pzPreloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo">⚡</div>
+      <div class="preloader-bar"><div class="preloader-bar-fill" id="pzPreloaderFill"></div></div>
+      <span class="preloader-label">CARGANDO SISTEMA POWERZONE</span>
+    </div>
+  </div>
+
+  <!-- Custom Cyber Cursor Elements -->
+  <div class="custom-cursor-dot" id="cursorDot"></div>
+  <div class="custom-cursor-ring" id="cursorRing"></div>
+
+  <!-- Top Scroll Progress Bar -->
+  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+  <!-- Background Ambient Glows -->
+  <div class="ambient-glow glow-top-left"></div>
+  <div class="ambient-glow glow-hero-right"></div>
+  <div class="ambient-glow glow-mid-left"></div>
+  <div class="ambient-glow glow-calc"></div>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="site-header" id="navbar">
+    <div class="container header-container">
+      <a href="#" class="logo" id="brandLogo">
+        <div class="logo-icon-box">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+          </svg>
+        </div>
+        <span class="logo-text">POWER<span class="logo-accent">ZONE</span></span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li><a href="#inicio" class="nav-link active">INICIO</a></li>
+          <li><a href="#calculadora" class="nav-link">CALCULADORA ⚡</a></li>
+          <li><a href="#objetivos" class="nav-link">OBJETIVOS</a></li>
+          <li><a href="#metodo" class="nav-link">MÉTODO</a></li>
+          <li><a href="#instalaciones" class="nav-link">ZONAS</a></li>
+          <li><a href="#entrenadores" class="nav-link">COACHES</a></li>
+          <li><a href="#clases" class="nav-link">HORARIOS</a></li>
+          <li><a href="#planes" class="nav-link">PLANES</a></li>
+        </ul>
+
+        <div class="nav-menu-footer">
+          <button class="btn btn-primary btn-pill btn-mobile-cta" id="mobileNavJoinBtn">
+            <span>PASE 1 DÍA VIP</span>
+            <span class="btn-arrow-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </button>
+          <a href="https://wa.me/573133340054?text=Hola%20POWERZONE%2C%20quiero%20informaci%C3%B3n" target="_blank" rel="noopener" class="btn btn-whatsapp btn-pill">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+              <path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.44 9.9-9.9 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.1a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.19-.31a8.22 8.22 0 0 1-1.27-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.55-3.7 8.23-8.25 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.4-.12-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.04-.38-1.99-1.22-.73-.66-1.23-1.46-1.37-1.71-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43-.14-.01-.31-.01-.48-.01a.92.92 0 0 0-.67.31c-.23.25-.87.85-.87 2.08 0 1.23.89 2.41 1.02 2.58.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.11-.23-.17-.48-.29z"/>
+            </svg>
+            <span>ESCRÍBENOS</span>
+          </a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Futuristic Audio FX Toggle -->
+        <button class="audio-toggle-btn" id="audioToggleBtn" title="Activar/Silenciar efectos sonoros UI">
+          <div class="soundwave-bars">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <span id="audioStatusText">SFX OFF</span>
+        </button>
+
+        <button class="btn btn-primary btn-pill btn-nav" id="navJoinBtn">
+          <span>PASE 1 DÍA VIP</span>
+          <span class="btn-arrow-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </span>
+        </button>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero-section" id="inicio">
+      <!-- Interactive Kinetic Energy Canvas -->
+      <canvas id="heroCanvas" class="hero-interactive-canvas"></canvas>
+
+      <div class="container hero-container">
+        
+        <!-- Left Hero Content -->
+        <div class="hero-content">
+          <div class="hero-tag-badge">
+            <span class="pulsing-dot"></span>
+            <span class="tag-text">CENTRO BIOMECÁNICO DE ALTO RENDIMIENTO</span>
+          </div>
+
+          <h1 class="hero-title">
+            VIVE TU <br>
+            <span class="gradient-lime-text">MEJOR VERSIÓN</span><span class="title-period">.</span>
+          </h1>
+
+          <p class="hero-desc">
+            Más que un gimnasio convencional, somos un <strong>ecosistema de alto rendimiento</strong> diseñado por científicos del deporte para maximizar tu fuerza, velocidad, composición corporal y longevidad.
+          </p>
+
+          <div class="hero-cta-group">
+            <button class="btn btn-primary btn-pill btn-lg glow-effect" id="heroJoinNowBtn">
+              <span>COMIENZA HOY</span>
+              <span class="btn-arrow-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </span>
+            </button>
+            <a href="#calculadora" class="btn btn-glass btn-pill btn-lg">
+              <span>CALCULAR MI PLAN ⚡</span>
+            </a>
+          </div>
+
+          <!-- Hero Metric Counters -->
+          <div class="hero-stats-capsule">
+            <div class="stat-card" data-tilt data-tilt-max="10" data-tilt-scale="1.03">
+              <div class="stat-icon-wrap icon-cyan">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <div class="stat-info">
+                <span class="stat-number count-up" data-target="1850">0</span>
+                <span class="stat-label">Atletas activos</span>
+              </div>
+            </div>
+
+            <div class="stat-card" data-tilt data-tilt-max="10" data-tilt-scale="1.03">
+              <div class="stat-icon-wrap icon-lime">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 5v14M18 5v14M2 9v6M22 9v6M6 12h12"/>
+                </svg>
+              </div>
+              <div class="stat-info">
+                <span class="stat-number count-up" data-target="65">0</span>
+                <span class="stat-label">Clases semanales</span>
+              </div>
+            </div>
+
+            <div class="stat-card" data-tilt data-tilt-max="10" data-tilt-scale="1.03">
+              <div class="stat-icon-wrap icon-orange">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+              </div>
+              <div class="stat-info">
+                <span class="stat-number count-up" data-target="14">0</span>
+                <span class="stat-label">Head Coaches</span>
+              </div>
+            </div>
+
+            <div class="stat-card" data-tilt data-tilt-max="10" data-tilt-scale="1.03">
+              <div class="stat-icon-wrap icon-teal">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+              <div class="stat-info">
+                <span class="stat-number count-up" data-target="99">0</span>
+                <span class="stat-label">% Satisfacción</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Visual with Modern Aura & 3D Tilt HUD -->
+        <div class="hero-visual">
+          <div class="hero-aura-ring"></div>
+          <div class="hero-aura-glow"></div>
+          
+          <div class="hero-image-frame" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2">
+            <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1000&auto=format&fit=crop" alt="Atleta de alto rendimiento en POWERZONE" class="hero-main-photo">
+            <div class="hero-photo-vignette"></div>
+          </div>
+
+          <!-- Floating Progress Dashboard Card -->
+          <div class="glass-widget hero-floating-card" data-tilt data-tilt-max="12" data-tilt-scale="1.02">
+            <div class="progress-header">
+              <div class="card-tag-wrap">
+                <span class="widget-live-dot"></span>
+                <span class="card-tag">BIOMETRÍA EN VIVO</span>
+              </div>
+              <span class="card-badge-pill">SISTEMA ACTIVO</span>
+            </div>
+
+            <div class="progress-radial-group">
+              <div class="radial-metric">
+                <svg viewBox="0 0 36 36" class="circular-chart">
+                  <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                  <path class="circle" id="heroProgressCircle" stroke-dasharray="94, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                  <text x="18" y="20.35" class="percentage" id="heroProgressText">94%</text>
+                </svg>
+              </div>
+              <div class="radial-metric-text">
+                <div class="metric-val" id="heroScoreVal">94.8 <span class="trend-up">↑ +5.4%</span></div>
+                <div class="metric-lbl">Score de Rendimiento Deportivo</div>
+              </div>
+            </div>
+
+            <div class="progress-bars-list">
+              <div class="progress-bar-row">
+                <span class="bar-name">Fuerza 1RM</span>
+                <div class="bar-track">
+                  <div class="bar-fill fill-lime" style="width: 92%;"></div>
+                </div>
+                <span class="bar-pct">92%</span>
+              </div>
+              <div class="progress-bar-row">
+                <span class="bar-name">VO2 Máx</span>
+                <div class="bar-track">
+                  <div class="bar-fill fill-cyan" style="width: 96%;"></div>
+                </div>
+                <span class="bar-pct">96%</span>
+              </div>
+              <div class="progress-bar-row">
+                <span class="bar-name">Recuperación</span>
+                <div class="bar-track">
+                  <div class="bar-fill fill-teal" style="width: 88%;"></div>
+                </div>
+                <span class="bar-pct">88%</span>
+              </div>
+            </div>
+
+            <!-- ECG Pulse Line Waveform & Interactive Modes -->
+            <div class="card-pulse-container">
+              <div class="pulse-label">
+                <span>FRECUENCIA CARDÍACA</span>
+                <strong class="bpm-text" id="liveBpmDisplay">148 BPM</strong>
+              </div>
+              <svg class="pulse-svg" viewBox="0 0 200 34" preserveAspectRatio="none">
+                <path class="pulse-path" d="M0,17 L30,17 L38,17 L44,4 L50,30 L56,2 L62,25 L68,17 L100,17 L106,6 L112,28 L118,17 L150,17 L156,3 L162,29 L168,17 L200,17" fill="none" stroke="url(#pulseGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                <defs>
+                  <linearGradient id="pulseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#bef226" />
+                    <stop offset="50%" stop-color="#22d3ee" />
+                    <stop offset="100%" stop-color="#bef226" />
+                  </linearGradient>
+                </defs>
+              </svg>
+
+              <div class="ecg-modes">
+                <button class="ecg-mode-pill" data-bpm="68" data-mode="Reposo">Reposo (68)</button>
+                <button class="ecg-mode-pill active" data-bpm="148" data-mode="Hipertrofia">Cardio/Fuerza (148)</button>
+                <button class="ecg-mode-pill" data-bpm="186" data-mode="Beast Mode">Beast (186)</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mini Floating Badge -->
+          <div class="hero-mini-pill" data-tilt data-tilt-max="15">
+            <span class="fire-icon" style="font-size: 1.4rem;">🔥</span>
+            <div>
+              <strong id="heroCaloriesCounter">920 kcal</strong>
+              <small>Gasto Metabólico Hoy</small>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= INNOVATIVE SECTION: POWER CALCULATOR (BIOMECÁNICA & NUTRICIÓN) ================= -->
+    <section class="section calc-section" id="calculadora">
+      <div class="container">
+        
+        <div class="calc-header-center" style="text-align: center; max-width: 680px; margin: 0 auto 30px;">
+          <div class="section-chip chip-cyan">
+            <span class="chip-dot"></span>
+            <span>ALGORITMO BIOMÉTRICO POWERZONE</span>
+          </div>
+          <h2 class="section-title">
+            🎯 CALCULADORA DE <span class="gradient-lime-text">RENDIMIENTO & MACROS</span>
+          </h2>
+          <p class="section-subtitle" style="margin: 10px auto 0;">
+            Descubre tu gasto calórico exacto, requerimiento de macronutrientes y estimación de fuerza máxima basada en la ciencia del deporte.
+          </p>
+        </div>
+
+        <div class="calc-grid">
+          
+          <!-- Left: Interactive Form -->
+          <div class="calc-form-card">
+            
+            <!-- Step 1: Goal Selection -->
+            <div class="calc-step-title">
+              <span class="calc-step-num">1</span>
+              <span>¿Cuál es tu objetivo principal?</span>
+            </div>
+
+            <div class="calc-goals-row">
+              <button type="button" class="goal-calc-btn active" data-calc-goal="muscle" data-mult="1.15">
+                <span class="btn-icon">💪</span>
+                <span>Ganar Músculo</span>
+              </button>
+              <button type="button" class="goal-calc-btn" data-calc-goal="fatloss" data-mult="0.80">
+                <span class="btn-icon">🔥</span>
+                <span>Perder Grasa</span>
+              </button>
+              <button type="button" class="goal-calc-btn" data-calc-goal="recomp" data-mult="1.0">
+                <span class="btn-icon">⚡</span>
+                <span>Recomposición</span>
+              </button>
+              <button type="button" class="goal-calc-btn" data-calc-goal="performance" data-mult="1.20">
+                <span class="btn-icon">🏆</span>
+                <span>Rendimiento</span>
+              </button>
+            </div>
+
+            <!-- Step 2: Body Stats Grid -->
+            <div class="calc-step-title">
+              <span class="calc-step-num">2</span>
+              <span>Parámetros Físicos</span>
+            </div>
+
+            <div class="calc-inputs-grid">
+              <div class="calc-input-group">
+                <label>Género</label>
+                <div class="calc-input-wrap">
+                  <select id="calcGender">
+                    <option value="male">Hombre</option>
+                    <option value="female">Mujer</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="calc-input-group">
+                <label>Nivel de Experiencia</label>
+                <div class="calc-input-wrap">
+                  <select id="calcLevel">
+                    <option value="beginner">Principiante (0 - 1 año)</option>
+                    <option value="intermediate" selected>Intermedio (1 - 3 años)</option>
+                    <option value="advanced">Avanzado (+3 años)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="calc-input-group">
+                <label>Peso Actual</label>
+                <div class="calc-input-wrap">
+                  <input type="number" id="calcWeight" value="75" min="40" max="200">
+                  <span class="calc-unit">kg</span>
+                </div>
+              </div>
+
+              <div class="calc-input-group">
+                <label>Estatura</label>
+                <div class="calc-input-wrap">
+                  <input type="number" id="calcHeight" value="178" min="120" max="230">
+                  <span class="calc-unit">cm</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3: Training Days Slider -->
+            <div class="calc-slider-group">
+              <div class="slider-header">
+                <span>Días de entrenamiento semanal</span>
+                <span class="slider-val-badge" id="daysValBadge">4 días / semana</span>
+              </div>
+              <input type="range" class="calc-range-input" id="calcDaysRange" min="2" max="6" value="4">
+            </div>
+
+            <button type="button" class="btn btn-primary btn-pill btn-lg" id="recalcBtn" style="width: 100%;">
+              <span>⚡ RECALCULAR PLAN BIOMÉTRICO</span>
+            </button>
+
+          </div>
+
+          <!-- Right: Live Result HUD -->
+          <div class="calc-result-card" id="calcResultCard">
+            <div>
+              <div class="res-header">
+                <span class="res-tag" id="resGoalTag">OBJETIVO: HIPERTROFIA</span>
+                <span style="font-size: 0.72rem; color: #94a3b8; font-weight: 700;">CIENCIA POWERZONE</span>
+              </div>
+
+              <div class="calories-hero-box">
+                <div class="cal-num"><span id="targetCaloriesDisplay">2,640</span><span class="cal-unit">kcal/día</span></div>
+                <div class="cal-lbl">Ingesta Calórica Diaria Optimizada</div>
+              </div>
+
+              <!-- Macros Breakdown -->
+              <div class="macros-grid">
+                <div class="macro-box">
+                  <span class="macro-name">Proteína</span>
+                  <div class="macro-val" id="macroProtDisplay">165g</div>
+                  <span class="macro-pct pct-prot">25% (2.2g/kg)</span>
+                </div>
+
+                <div class="macro-box">
+                  <span class="macro-name">Carbohidratos</span>
+                  <div class="macro-val" id="macroCarbDisplay">315g</div>
+                  <span class="macro-pct pct-carb">50% Energía</span>
+                </div>
+
+                <div class="macro-box">
+                  <span class="macro-name">Grasas Saludables</span>
+                  <div class="macro-val" id="macroFatDisplay">72g</div>
+                  <span class="macro-pct pct-fat">25% Hormonal</span>
+                </div>
+              </div>
+
+              <!-- Estimated 1RM Projection -->
+              <div class="onerm-box">
+                <div class="onerm-title">
+                  <span>POTENCIAL 1RM ESTIMADO (12 SEMANAS)</span>
+                  <span style="color: var(--lime-bright);">+18% Proyección</span>
+                </div>
+                <div class="onerm-items-flex">
+                  <div class="onerm-item">
+                    <span>Press Banca</span>
+                    <strong id="bench1RM">105 kg</strong>
+                  </div>
+                  <div class="onerm-item">
+                    <span>Sentadilla</span>
+                    <strong id="squat1RM">145 kg</strong>
+                  </div>
+                  <div class="onerm-item">
+                    <span>Peso Muerto</span>
+                    <strong id="deadlift1RM">175 kg</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn btn-white-pill btn-pill" id="claimPlanBtn" style="width: 100%;">
+              <span>ACTIVAR ESTE PROGRAMA EN POWERZONE ⚡</span>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= GOALS SECTION (¿QUÉ QUIERES CONSEGUIR?) ================= -->
+    <section class="section goals-section" id="objetivos">
+      <div class="container">
+        <div class="goals-grid-layout">
+          
+          <!-- Left Column Intro Card -->
+          <div class="goals-header-card">
+            <div class="section-chip">PROGRAMAS ESPECIALIZADOS</div>
+            <h2 class="section-title">
+              ¿QUÉ QUIERES <br>
+              <span class="text-lime-gradient">CONSEGUIR?</span>
+            </h2>
+            <p class="section-subtitle">
+              Nuestros programas están diseñados con sobrecarga progresiva medida y control biomecánico para que nunca te estanques.
+            </p>
+            <a href="#planes" class="btn btn-outline btn-pill btn-discover" style="margin-top: 24px;">
+              <span>EXPLORAR MEMBRESÍAS</span>
+              <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- 4 Cards Grid with 3D Tilt -->
+          <div class="goals-cards-grid">
+            
+            <!-- Goal 1 -->
+            <div class="goal-card" data-tilt data-tilt-max="10" data-tilt-scale="1.02">
+              <div class="goal-card-inner">
+                <div class="goal-icon-badge badge-lime">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+                    <path d="M6 5v14M18 5v14M2 9v6M22 9v6M6 12h12"/>
+                  </svg>
+                </div>
+                <div class="goal-img-box">
+                  <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=800&auto=format&fit=crop" alt="Ganar Músculo">
+                  <div class="goal-img-overlay"></div>
+                </div>
+                <div class="goal-info">
+                  <h3 class="goal-title">GANAR MÚSCULO</h3>
+                  <p class="goal-sub">Hipertrofia miofibrilar & fuerza máxima</p>
+                  <div class="goal-freq-pill">
+                    <span>⏱️ 4-5 sesiones / semana</span>
+                  </div>
+                </div>
+                <button class="goal-action-btn goal-quick-view" data-goal-name="Ganar Músculo" aria-label="Ver programa Ganar Músculo">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Goal 2 -->
+            <div class="goal-card" data-tilt data-tilt-max="10" data-tilt-scale="1.02">
+              <div class="goal-card-inner">
+                <div class="goal-icon-badge badge-orange">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                    <path d="M8.5 2h7M12 22v-4"/>
+                  </svg>
+                </div>
+                <div class="goal-img-box">
+                  <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=800&auto=format&fit=crop" alt="Definición Extrema">
+                  <div class="goal-img-overlay"></div>
+                </div>
+                <div class="goal-info">
+                  <h3 class="goal-title">DEFINICIÓN EXTREMA</h3>
+                  <p class="goal-sub">Déficit calórico metabólico & HIIT</p>
+                  <div class="goal-freq-pill">
+                    <span>⏱️ 3-5 sesiones / semana</span>
+                  </div>
+                </div>
+                <button class="goal-action-btn goal-quick-view" data-goal-name="Definición Extrema" aria-label="Ver programa Definición Extrema">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Goal 3 -->
+            <div class="goal-card" data-tilt data-tilt-max="10" data-tilt-scale="1.02">
+              <div class="goal-card-inner">
+                <div class="goal-icon-badge badge-cyan">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+                    <circle cx="12" cy="5" r="3"/>
+                    <path d="M4 17l6-2 4 4 6-12"/>
+                  </svg>
+                </div>
+                <div class="goal-img-box">
+                  <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=800&auto=format&fit=crop" alt="Movilidad y Longevidad">
+                  <div class="goal-img-overlay"></div>
+                </div>
+                <div class="goal-info">
+                  <h3 class="goal-title">MOVILIDAD & REHAB</h3>
+                  <p class="goal-sub">Rango articular, descarga & salud espinal</p>
+                  <div class="goal-freq-pill">
+                    <span>⏱️ 3-4 sesiones / semana</span>
+                  </div>
+                </div>
+                <button class="goal-action-btn goal-quick-view" data-goal-name="Movilidad & Rehab" aria-label="Ver programa Movilidad & Rehab">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Goal 4 -->
+            <div class="goal-card" data-tilt data-tilt-max="10" data-tilt-scale="1.02">
+              <div class="goal-card-inner">
+                <div class="goal-icon-badge badge-lime">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                  </svg>
+                </div>
+                <div class="goal-img-box">
+                  <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=800&auto=format&fit=crop" alt="Atleta Híbrido">
+                  <div class="goal-img-overlay"></div>
+                </div>
+                <div class="goal-info">
+                  <h3 class="goal-title">ATLETA HÍBRIDO</h3>
+                  <p class="goal-sub">Velocidad, potencia explosiva & agilidad</p>
+                  <div class="goal-freq-pill">
+                    <span>⏱️ 4-6 sesiones / semana</span>
+                  </div>
+                </div>
+                <button class="goal-action-btn goal-quick-view" data-goal-name="Atleta Híbrido" aria-label="Ver programa Atleta Híbrido">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= THE POWERZONE METHOD SECTION ================= -->
+    <section class="section method-section" id="metodo">
+      <div class="container">
+        <div class="method-layout">
+          
+          <!-- Left Method Header -->
+          <div class="method-header-box">
+            <div class="section-chip chip-orange">
+              <span class="chip-dot"></span>
+              <span>CIENCIA DEL DEPORTE</span>
+            </div>
+            <h2 class="method-title">
+              <span class="sub-lead">EL SISTEMA</span>
+              POWERZONE <br>
+              METHOD
+            </h2>
+            <p class="method-desc">
+              Cuatro pilares sincronizados que combinan biomecánica aplicada, acondicionamiento de alta cadencia y regeneración neural para resultados sostenibles.
+            </p>
+            <a href="#planes" class="btn btn-primary btn-pill btn-method glow-effect">
+              <span>CONOCER EL SISTEMA</span>
+              <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- 4 Pillars Horizontally -->
+          <div class="method-pillars-wrapper">
+            <div class="pillars-grid">
+              
+              <!-- Pillar 01 -->
+              <div class="pillar-card" data-tilt data-tilt-max="8">
+                <div class="pillar-top-row">
+                  <div class="pillar-number color-lime">01</div>
+                  <span class="pillar-badge">FASE 1</span>
+                </div>
+                <h4 class="pillar-name">STRENGTH</h4>
+                <p class="pillar-sub">Hipertrofia progresiva, tensión mecánica y reclutamiento de unidades motoras.</p>
+                <div class="pillar-icon icon-lime-bg">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 4v16M18 4v16M2 8v8M22 8v8M6 12h12"/>
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Pillar 02 -->
+              <div class="pillar-card" data-tilt data-tilt-max="8">
+                <div class="pillar-top-row">
+                  <div class="pillar-number color-cyan">02</div>
+                  <span class="pillar-badge">FASE 2</span>
+                </div>
+                <h4 class="pillar-name">CONDITIONING</h4>
+                <p class="pillar-sub">Potencia anaeróbica láctica, umbral de lactato y capacidad mitocondrial.</p>
+                <div class="pillar-icon icon-cyan-bg">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Pillar 03 -->
+              <div class="pillar-card" data-tilt data-tilt-max="8">
+                <div class="pillar-top-row">
+                  <div class="pillar-number color-orange">03</div>
+                  <span class="pillar-badge">FASE 3</span>
+                </div>
+                <h4 class="pillar-name">MOBILITY & RECOVERY</h4>
+                <p class="pillar-sub">Descompresión miofascial, movilidad articular y balance parasimpático.</p>
+                <div class="pillar-icon icon-orange-bg">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="4" r="2"/>
+                    <path d="M5 21l4-7 4 3 6-7"/>
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Pillar 04 -->
+              <div class="pillar-card" data-tilt data-tilt-max="8">
+                <div class="pillar-top-row">
+                  <div class="pillar-number color-blue">04</div>
+                  <span class="pillar-badge">FASE 4</span>
+                </div>
+                <h4 class="pillar-name">PEAK PERFORMANCE</h4>
+                <p class="pillar-sub">Velocidad de reacción, pliometría y aceleración para rendimiento de élite.</p>
+                <div class="pillar-icon icon-blue-bg">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                  </svg>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= INNOVATIVE SECTION: 360° FACILITIES & ZONE EXPLORER ================= -->
+    <section class="section facility-explorer-section" id="instalaciones">
+      <div class="container">
+        
+        <div class="facility-explorer-header" style="text-align: center; max-width: 650px; margin: 0 auto 36px;">
+          <div class="section-chip">INSTALACIONES DE VANGUARDIA</div>
+          <h2 class="section-title">
+            EXPLORA NUESTRAS <span class="text-lime-gradient">4 ZONAS CLAVE</span>
+          </h2>
+          <p class="section-subtitle" style="margin: 10px auto 0;">
+            Más de 2,200 m² equipados con la maquinaria biomecánica más avanzada del mundo.
+          </p>
+        </div>
+
+        <!-- Zone Navigation Tabs -->
+        <div class="zone-tabs-nav">
+          <button class="zone-tab-btn active" data-zone="biomechanics">
+            <span class="tab-icon">⚙️</span>
+            <span>Zona Biomecánica Hammer Strength®</span>
+          </button>
+          <button class="zone-tab-btn" data-zone="sprint">
+            <span class="tab-icon">⚡</span>
+            <span>Pista Sprint & Turf Sleds</span>
+          </button>
+          <button class="zone-tab-btn" data-zone="biohacking">
+            <span class="tab-icon">🧊</span>
+            <span>Biohacking, Cryo & Spa</span>
+          </button>
+          <button class="zone-tab-btn" data-zone="functional">
+            <span class="tab-icon">🥊</span>
+            <span>Combat Arena & Functional Rig</span>
+          </button>
+        </div>
+
+        <!-- Interactive Zone Display Card -->
+        <div class="zone-display-card" id="zoneDisplayCard">
+          <div class="zone-img-viewport">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1200&auto=format&fit=crop" alt="Zona Biomecánica" class="zone-main-img" id="zoneMainImg">
+            
+            <!-- Interactive Hotspot 1 -->
+            <div class="zone-hotspot" style="top: 35%; left: 45%;">
+              <span>+</span>
+              <div class="zone-hotspot-popover">Racks Calibrados IPF & Barras Eleiko</div>
+            </div>
+
+            <!-- Interactive Hotspot 2 -->
+            <div class="zone-hotspot" style="top: 65%; left: 70%;">
+              <span>+</span>
+              <div class="zone-hotspot-popover">Mancuernas de Uretano hasta 65 kg</div>
+            </div>
+          </div>
+
+          <div class="zone-info-panel">
+            <div>
+              <span class="zone-tag" id="zoneTag">ZONA 01 • FUERZA PURA</span>
+              <h3 class="zone-title" id="zoneTitle">Zona Biomecánica Hammer Strength®</h3>
+              <p class="zone-desc" id="zoneDesc">
+                Equipamiento de máxima precisión diseñado con curvas de fuerza iso-laterales convergentes y divergentes que protegen tus articulaciones mientras maximizan el estímulo hipertrófico.
+              </p>
+
+              <div class="zone-specs-list" id="zoneSpecsList">
+                <div class="zone-spec-item">
+                  <div class="spec-icon">✓</div>
+                  <span>14 Racks olímpicos con plataformas de absorción acústica</span>
+                </div>
+                <div class="zone-spec-item">
+                  <div class="spec-icon">✓</div>
+                  <span>Máquinas de palanca con carga en discos oficiales</span>
+                </div>
+                <div class="zone-spec-item">
+                  <div class="spec-icon">✓</div>
+                  <span>Zona de peso libre con mancuernas de hasta 65 kg</span>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn btn-primary btn-pill btn-book-zone" id="zoneExploreBtn">
+              <span>AGENDAR VISITA GUIADA</span>
+              <span class="btn-arrow-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= COACHES SECTION ================= -->
+    <section class="section coaches-section" id="entrenadores">
+      <div class="container">
+        
+        <div class="coaches-header">
+          <div>
+            <div class="section-chip">STAFF INTERNACIONAL</div>
+            <h2 class="section-title">
+              NUESTROS <span class="text-lime-gradient">HEAD COACHES</span>
+            </h2>
+            <p class="section-subtitle">
+              Certificados por NSCA, CSCS y másteres en fisiología del ejercicio.
+            </p>
+          </div>
+          <a href="#contacto" class="btn btn-outline btn-pill" id="allCoachesBtn">
+            <span>VER TODO EL EQUIPO</span>
+          </a>
+        </div>
+
+        <div class="coaches-cards-row">
+          
+          <!-- Coach 1 -->
+          <div class="coach-card" data-tilt data-tilt-max="10">
+            <div class="coach-img-holder">
+              <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?q=80&w=800&auto=format&fit=crop" alt="Coach Marco Rivera">
+              <div class="coach-status-pill">● DISPONIBLE 1 A 1</div>
+            </div>
+            <div class="coach-info">
+              <h4 class="coach-name">MARCO RIVERA</h4>
+              <p class="coach-role">Head Coach & Fisiólogo</p>
+              <p class="coach-spec">Especialidad: Hipertrofia & Fuerza 1RM</p>
+              
+              <div class="coach-metrics-row">
+                <div class="coach-m-item">
+                  <span>Atletas</span>
+                  <strong>+340</strong>
+                </div>
+                <div class="coach-m-item">
+                  <span>Experiencia</span>
+                  <strong>9 Años</strong>
+                </div>
+                <div class="coach-m-item">
+                  <span>Certificación</span>
+                  <strong>CSCS / NSCA</strong>
+                </div>
+              </div>
+
+              <div class="coach-actions-row">
+                <button class="coach-book-btn book-coach-trigger" data-coach="Marco Rivera">RESERVAR SESIÓN</button>
+                <div class="coach-social-badges">
+                  <a href="#" class="social-badge" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path></svg></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coach 2 -->
+          <div class="coach-card" data-tilt data-tilt-max="10">
+            <div class="coach-img-holder">
+              <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=800&auto=format&fit=crop" alt="Coach Valeria Gómez">
+              <div class="coach-status-pill">● DISPONIBLE 1 A 1</div>
+            </div>
+            <div class="coach-info">
+              <h4 class="coach-name">VALERIA GÓMEZ</h4>
+              <p class="coach-role">Performance & HIIT Specialist</p>
+              <p class="coach-spec">Especialidad: VO2 Máx & Acondicionamiento</p>
+              
+              <div class="coach-metrics-row">
+                <div class="coach-m-item">
+                  <span>Atletas</span>
+                  <strong>+420</strong>
+                </div>
+                <div class="coach-m-item">
+                  <span>Experiencia</span>
+                  <strong>7 Años</strong>
+                </div>
+                <div class="coach-m-item">
+                  <span>Certificación</span>
+                  <strong>EXOS / CrossFit L3</strong>
+                </div>
+              </div>
+
+              <div class="coach-actions-row">
+                <button class="coach-book-btn book-coach-trigger" data-coach="Valeria Gómez">RESERVAR SESIÓN</button>
+                <div class="coach-social-badges">
+                  <a href="#" class="social-badge" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path></svg></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coach 3 -->
+          <div class="coach-card" data-tilt data-tilt-max="10">
+            <div class="coach-img-holder">
+              <img src="https://images.unsplash.com/photo-1534367507873-d2d7e24c797f?q=80&w=800&auto=format&fit=crop" alt="Coach Diego Salazar">
+              <div class="coach-status-pill">● DISPONIBLE 1 A 1</div>
+            </div>
+            <div class="coach-info">
+              <h4 class="coach-name">DIEGO SALAZAR</h4>
+              <p class="coach-role">Mobility & Rehab Director</p>
+              <p class="coach-spec">Especialidad: Prevención de Lesiones & FRS</p>
+              
+              <div class="coach-metrics-row">
+                <div class="coach-m-item">
+                  <span>Atletas</span>
+                  <strong>+280</strong>
+                </div>
+                <div class="coach-m-item">
+                  <span>Experiencia</span>
+                  <strong>8 Años</strong>
+                </div>
+                <div class="coach-m-item">
+                  <span>Certificación</span>
+                  <strong>FRC® / FMS 2</strong>
+                </div>
+              </div>
+
+              <div class="coach-actions-row">
+                <button class="coach-book-btn book-coach-trigger" data-coach="Diego Salazar">RESERVAR SESIÓN</button>
+                <div class="coach-social-badges">
+                  <a href="#" class="social-badge" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path></svg></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= TRANSFORMATIONS & SCHEDULE SECTION ================= -->
+    <section class="section trans-schedule-section" id="clases">
+      <div class="container">
+        <div class="trans-schedule-grid">
+          
+          <!-- Left: Real Transformations Interactive (Multi-Case) -->
+          <div class="trans-area">
+            <div class="trans-header" style="margin-bottom: 20px;">
+              <div class="section-chip">CASOS DE ÉXITO REALES</div>
+              <h2 class="section-title">TRANSFORMACIONES<br><span class="text-lime-gradient">COMPROBADAS</span></h2>
+              <p class="section-subtitle">Arrastra el selector o cambia de atleta para ver la evolución.</p>
+            </div>
+
+            <!-- Multi-Case Pills -->
+            <div class="trans-case-pills">
+              <button class="case-pill active" data-case="carlos">Carlos V. (+8kg Músculo)</button>
+              <button class="case-pill" data-case="valentina">Valentina S. (-14kg Grasa)</button>
+              <button class="case-pill" data-case="mateo">Mateo D. (Híbrido 1RM)</button>
+            </div>
+
+            <div class="trans-card">
+              <!-- Before/After interactive comparison with Labels -->
+              <div class="trans-compare-box" id="compareContainer">
+                <div class="compare-img compare-after" id="compareAfter" style="background-image: url('https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=800&auto=format&fit=crop');">
+                  <span class="compare-label label-after">DESPUÉS (SEMANA 16)</span>
+                </div>
+                <div class="compare-img compare-before" id="compareBefore" style="background-image: url('https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=800&auto=format&fit=crop');">
+                  <span class="compare-label label-before">ANTES</span>
+                </div>
+                <div class="compare-handle" id="compareHandle">
+                  <div class="handle-circle">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <polyline points="15 18 9 12 15 6"></polyline>
+                      <polyline points="9 18 3 12 9 6"></polyline>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Metrics Column -->
+              <div class="trans-metrics-list" id="transMetricsList">
+                <div class="t-metric-item">
+                  <span class="t-val">+8.4<span class="t-unit">kg</span></span>
+                  <span class="t-lbl">Masa Muscular</span>
+                </div>
+                <div class="t-metric-item">
+                  <span class="t-val">-7.2<span class="t-unit">%</span></span>
+                  <span class="t-lbl">Grasa Corporal</span>
+                </div>
+                <div class="t-metric-item">
+                  <span class="t-val">+38<span class="t-unit">%</span></span>
+                  <span class="t-lbl">Fuerza 1RM</span>
+                </div>
+                <div class="t-metric-item">
+                  <span class="t-val">16</span>
+                  <span class="t-lbl">Semanas</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Class Schedule -->
+          <div class="schedule-area">
+            <div class="schedule-header">
+              <div>
+                <div class="section-chip chip-cyan">
+                  <span class="chip-dot"></span>
+                  <span>CALENDARIO EN VIVO</span>
+                </div>
+                <h2 class="section-title">HORARIO DE CLASES</h2>
+                <p class="section-subtitle">Haz clic en cualquier sesión para reservar tu cupo VIP.</p>
+              </div>
+            </div>
+
+            <!-- Schedule Filter Tags -->
+            <div class="schedule-filters">
+              <button class="filter-pill active" data-filter="all">TODAS</button>
+              <button class="filter-pill" data-filter="strength">FUERZA</button>
+              <button class="filter-pill" data-filter="hiit">HIIT</button>
+              <button class="filter-pill" data-filter="mobility">MOVILIDAD</button>
+              <button class="filter-pill" data-filter="power">POWER</button>
+              <button class="filter-pill" data-filter="conditioning">CONDITIONING</button>
+            </div>
+
+            <!-- Schedule Week Table -->
+            <div class="schedule-table-wrap">
+              <div class="schedule-table" id="scheduleTable">
+                
+                <!-- LUN -->
+                <div class="day-col">
+                  <div class="day-name">LUN</div>
+                  <div class="class-slot slot-strength" data-type="strength" data-class="Strength & Hypertrophy" data-time="07:00 AM" data-coach="Marco Rivera" data-spots="3">
+                    <span class="slot-time">07:00</span>
+                    <span class="slot-name">STRENGTH</span>
+                    <span class="slot-spots">⚡ 3 cupos</span>
+                  </div>
+                  <div class="class-slot slot-power" data-type="power" data-class="Power Lifting Elite" data-time="18:30 PM" data-coach="Marco Rivera" data-spots="2">
+                    <span class="slot-time">18:30</span>
+                    <span class="slot-name">POWER</span>
+                    <span class="slot-spots">⚡ 2 cupos</span>
+                  </div>
+                </div>
+
+                <!-- MAR -->
+                <div class="day-col">
+                  <div class="day-name">MAR</div>
+                  <div class="class-slot slot-hiit" data-type="hiit" data-class="HIIT Metabolic Burn" data-time="08:00 AM" data-coach="Valeria Gómez" data-spots="5">
+                    <span class="slot-time">08:00</span>
+                    <span class="slot-name">HIIT BURN</span>
+                    <span class="slot-spots">⚡ 5 cupos</span>
+                  </div>
+                  <div class="class-slot slot-strength" data-type="strength" data-class="Upper Body Biomechanics" data-time="19:00 PM" data-coach="Diego Salazar" data-spots="4">
+                    <span class="slot-time">19:00</span>
+                    <span class="slot-name">STRENGTH</span>
+                    <span class="slot-spots">⚡ 4 cupos</span>
+                  </div>
+                </div>
+
+                <!-- MIÉ -->
+                <div class="day-col">
+                  <div class="day-name">MIÉ</div>
+                  <div class="class-slot slot-mobility" data-type="mobility" data-class="Functional Mobility Flow" data-time="08:00 AM" data-coach="Diego Salazar" data-spots="6">
+                    <span class="slot-time">08:00</span>
+                    <span class="slot-name">MOBILITY</span>
+                    <span class="slot-spots">⚡ 6 cupos</span>
+                  </div>
+                  <div class="class-slot slot-hiit" data-type="hiit" data-class="Athletic Sprint Intervals" data-time="18:00 PM" data-coach="Valeria Gómez" data-spots="2">
+                    <span class="slot-time">18:00</span>
+                    <span class="slot-name">SPRINT HIIT</span>
+                    <span class="slot-spots">⚡ 2 cupos</span>
+                  </div>
+                </div>
+
+                <!-- JUE -->
+                <div class="day-col">
+                  <div class="day-name">JUE</div>
+                  <div class="class-slot slot-strength" data-type="strength" data-class="Leg Day & Glute Focus" data-time="07:30 AM" data-coach="Marco Rivera" data-spots="4">
+                    <span class="slot-time">07:30</span>
+                    <span class="slot-name">LEGS & CORE</span>
+                    <span class="slot-spots">⚡ 4 cupos</span>
+                  </div>
+                  <div class="class-slot slot-functional" data-type="functional" data-class="Cross Combat & Kettlebells" data-time="19:00 PM" data-coach="Valeria Gómez" data-spots="1">
+                    <span class="slot-time">19:00</span>
+                    <span class="slot-name">COMBAT RIG</span>
+                    <span class="slot-spots" style="color: #ef4444;">⚡ 1 cupo!</span>
+                  </div>
+                </div>
+
+                <!-- VIE -->
+                <div class="day-col">
+                  <div class="day-name">VIE</div>
+                  <div class="class-slot slot-hiit" data-type="hiit" data-class="Full Body Blast" data-time="08:00 AM" data-coach="Valeria Gómez" data-spots="4">
+                    <span class="slot-time">08:00</span>
+                    <span class="slot-name">FULL BLAST</span>
+                    <span class="slot-spots">⚡ 4 cupos</span>
+                  </div>
+                  <div class="class-slot slot-strength" data-type="strength" data-class="Push / Pull Hypertrophy" data-time="18:00 PM" data-coach="Marco Rivera" data-spots="5">
+                    <span class="slot-time">18:00</span>
+                    <span class="slot-name">PUSH / PULL</span>
+                    <span class="slot-spots">⚡ 5 cupos</span>
+                  </div>
+                </div>
+
+                <!-- SÁB -->
+                <div class="day-col">
+                  <div class="day-name">SÁB</div>
+                  <div class="class-slot slot-conditioning" data-type="conditioning" data-class="Hybrid Team Endurance" data-time="09:00 AM" data-coach="Staff Powerzone" data-spots="8">
+                    <span class="slot-time">09:00</span>
+                    <span class="slot-name">TEAM ENDUR</span>
+                    <span class="slot-spots">⚡ 8 cupos</span>
+                  </div>
+                  <div class="class-slot slot-mobility" data-type="mobility" data-class="Deep Recovery & Sauna" data-time="11:30 AM" data-coach="Diego Salazar" data-spots="7">
+                    <span class="slot-time">11:30</span>
+                    <span class="slot-name">CRYO REHAB</span>
+                    <span class="slot-spots">⚡ 7 cupos</span>
+                  </div>
+                </div>
+
+                <!-- DOM -->
+                <div class="day-col">
+                  <div class="day-name">DOM</div>
+                  <div class="class-slot slot-mobility" data-type="mobility" data-class="Athletic Yoga & Breathwork" data-time="09:30 AM" data-coach="Diego Salazar" data-spots="9">
+                    <span class="slot-time">09:30</span>
+                    <span class="slot-name">YOGA FLOW</span>
+                    <span class="slot-spots">⚡ 9 cupos</span>
+                  </div>
+                  <div class="class-slot slot-functional" data-type="functional" data-class="Open Gym & Free Track" data-time="12:00 PM" data-coach="Open Access" data-spots="20">
+                    <span class="slot-time">12:00</span>
+                    <span class="slot-name">OPEN GYM</span>
+                    <span class="slot-spots">Ilimitado</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= COMMUNITY & CHALLENGE SECTION ================= -->
+    <section class="section community-challenge-section" id="comunidad">
+      <div class="container">
+        <div class="comm-chall-grid">
+          
+          <!-- Left: Community -->
+          <div class="community-area">
+            <div class="comm-text-header">
+              <div class="section-chip">LA TRIBU DE ÉLITE</div>
+              <h2 class="section-title">UNA COMUNIDAD<br><span class="text-lime-gradient">QUE TE IMPULSA</span></h2>
+              <p class="section-subtitle">
+                Entrena junto a personas comprometidas con la excelencia física y mental. Sin egos, con respeto y apoyo mutuo incondicional.
+              </p>
+              <button class="btn btn-primary btn-pill btn-comm glow-effect" id="joinCommBtn" style="margin-top: 20px;">
+                <span>UNIRME A LA COMUNIDAD</span>
+                <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+
+            <!-- Bento Photo Gallery Grid -->
+            <div class="community-photo-grid">
+              <div class="comm-img-item"><img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=500&auto=format&fit=crop" alt="Comunidad Powerzone 1"></div>
+              <div class="comm-img-item comm-img-tall"><img src="https://images.unsplash.com/photo-1549060279-7e168fcee0c2?q=80&w=500&auto=format&fit=crop" alt="Comunidad Powerzone 2"></div>
+              <div class="comm-img-item"><img src="https://images.unsplash.com/photo-1571388208497-71bedc66e932?q=80&w=500&auto=format&fit=crop" alt="Comunidad Powerzone 3"></div>
+              <div class="comm-img-item"><img src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?q=80&w=500&auto=format&fit=crop" alt="Comunidad Powerzone 4"></div>
+              <div class="comm-img-item"><img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=500&auto=format&fit=crop" alt="Comunidad Powerzone 5"></div>
+            </div>
+          </div>
+
+          <!-- Right: Powerzone Challenge Card -->
+          <div class="challenge-card" data-tilt data-tilt-max="8">
+            <span class="challenge-pill-tag">LEADERBOARD MENSUAL</span>
+            <h3 class="challenge-title">POWERZONE CHALLENGE</h3>
+            <p class="challenge-sub">Compite en el ranking oficial de workouts completados y gana indumentaria de élite.</p>
+
+            <div class="challenge-ranking-list">
+              <div class="rank-item rank-gold">
+                <div class="rank-badge">🥇</div>
+                <span class="rank-name">ANDREA MENDOZA</span>
+                <span class="rank-score">52 workouts</span>
+              </div>
+              <div class="rank-item rank-silver">
+                <div class="rank-badge">🥈</div>
+                <span class="rank-name">DANIEL RÍOS</span>
+                <span class="rank-score">48 workouts</span>
+              </div>
+              <div class="rank-item rank-bronze">
+                <div class="rank-badge">🥉</div>
+                <span class="rank-name">MARÍA J. SILVA</span>
+                <span class="rank-score">46 workouts</span>
+              </div>
+              <div class="rank-item">
+                <div class="rank-badge">4</div>
+                <span class="rank-name">JUAN PABLO CASTRO</span>
+                <span class="rank-score">44 workouts</span>
+              </div>
+            </div>
+
+            <button class="btn btn-white-pill btn-challenge" id="joinChallengeBtn" style="width: 100%;">
+              <span>INSCRIBIRME AL RETO DEL MES</span>
+              <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= APP & PRICING PLANS SECTION ================= -->
+    <section class="section app-pricing-section" id="planes">
+      <div class="container">
+        <div class="app-pricing-grid">
+          
+          <!-- Left: Mobile App Promo -->
+          <div class="app-promo-area">
+            <div class="phone-mockup-wrapper" data-tilt data-tilt-max="12">
+              <div class="phone-device">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                  <div class="phone-header">
+                    <div class="phone-avatar-box">
+                      <span class="p-avatar-dot"></span>
+                    </div>
+                    <div class="phone-user">
+                      <span class="p-hello">Hola, Atleta</span>
+                      <span class="p-status">Rutina: <strong>Leg Day & Core</strong></span>
+                    </div>
+                  </div>
+                  
+                  <div class="phone-card-workout">
+                    <div class="p-workout-badge">HOY • SESIÓN 4 DE 5</div>
+                    <div class="p-workout-title">HEAVY SQUATS & SLED</div>
+                    <div class="p-workout-stats">
+                      <span>⏱️ 55 min</span> • <span>🔥 580 kcal</span>
+                    </div>
+                  </div>
+
+                  <div class="phone-stat-box">
+                    <div class="p-stat-top">
+                      <span class="p-stat-lbl">Progreso semanal</span>
+                      <span class="p-stat-val">88%</span>
+                    </div>
+                    <div class="p-stat-bar"><div class="p-stat-fill" style="width: 88%;"></div></div>
+                  </div>
+
+                  <div class="phone-macro-box">
+                    <span class="p-macro-lbl">Consumo Calórico Diario</span>
+                    <div class="p-macro-val">2,420 / 2,640 kcal</div>
+                    <div class="p-macro-bar"><div class="p-macro-fill" style="width: 92%;"></div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="app-info-content">
+              <div class="section-chip">APP INTEGRADA 24/7</div>
+              <h2 class="section-title">TU RENDIMIENTO<br><span class="text-lime-gradient">EN TU BOLSILLO</span></h2>
+              
+              <ul class="app-features-list">
+                <li>
+                  <div class="check-icon">✓</div>
+                  <div>
+                    <strong>Rutinas sincronizadas con tu Coach</strong>
+                    <small>Actualización continua según tu sobrecarga progresiva.</small>
+                  </div>
+                </li>
+                <li>
+                  <div class="check-icon">✓</div>
+                  <div>
+                    <strong>Control biométrico y de cargas 1RM</strong>
+                    <small>Historial de peso levantado, series y RPE en tiempo real.</small>
+                  </div>
+                </li>
+                <li>
+                  <div class="check-icon">✓</div>
+                  <div>
+                    <strong>Reserva de clases en 1 clic</strong>
+                    <small>Acceso prioritario y confirmación inmediata en tu calendario.</small>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="store-badges">
+                <a href="#" class="store-btn" aria-label="App Store">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.61-.75 1.04-1.8 1.01-2.87-.96.04-2.09.65-2.73 1.4-.56.64-.99 1.7-1.01 2.76 1.07.08 2.12-.54 2.73-1.29z"/>
+                  </svg>
+                  <div class="store-btn-text">
+                    <small>Consíguelo en</small>
+                    <strong>App Store</strong>
+                  </div>
+                </a>
+
+                <a href="#" class="store-btn" aria-label="Google Play">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M3.609 1.814L13.792 12 3.61 22.186a1.99 1.99 0 0 1-.22-.924V2.738c0-.348.08-.674.219-.924zm11.31 11.31l2.45 2.45-12.06 6.963 9.61-9.413zm0-2.248L5.309.463l12.06 6.963-2.45 2.45zm1.127 1.124l3.528 2.037a1.44 1.44 0 0 0 0-2.496l-3.528-2.037-.999.998.999.998z"/>
+                  </svg>
+                  <div class="store-btn-text">
+                    <small>Disponible en</small>
+                    <strong>Google Play</strong>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Pricing Plans Cards with Monthly / Annual Switch -->
+          <div class="pricing-area">
+            <div class="pricing-header">
+              <div class="section-chip">MEMBRESÍAS FLEXIBLES</div>
+              <h2 class="section-title">ELIGE TU PLAN</h2>
+              <p class="section-subtitle">Sin contratos forzosos. Cancela en cualquier momento.</p>
+
+              <!-- Monthly vs Annual Interactive Switch -->
+              <div class="pricing-billing-switch">
+                <span class="switch-label active" id="labelMonthly">Mensual</span>
+                <div class="switch-toggle-track" id="billingToggleTrack">
+                  <div class="switch-toggle-knob"></div>
+                </div>
+                <span class="switch-label" id="labelAnnual">Anual</span>
+                <span class="discount-badge">AHORRA 20%</span>
+              </div>
+            </div>
+
+            <div class="pricing-cards-grid">
+              
+              <!-- Plan 1: BASIC START -->
+              <div class="pricing-card" data-tilt data-tilt-max="8">
+                <div class="p-card-top">
+                  <span class="plan-tag">INICIACIÓN</span>
+                  <h4 class="p-tier-name">BASIC<br><span>START</span></h4>
+                  <div class="p-price">
+                    <span class="p-currency">$</span>
+                    <span class="p-amt price-val" data-monthly="29" data-annual="23">29</span>
+                    <span class="p-period">/mes</span>
+                  </div>
+                </div>
+
+                <ul class="p-features">
+                  <li><span class="p-bullet">✓</span> Acceso ilimitado al gimnasio</li>
+                  <li><span class="p-bullet">✓</span> Clases grupales estándar</li>
+                  <li><span class="p-bullet">✓</span> Evaluación física biomecánica inicial</li>
+                  <li><span class="p-bullet">✓</span> Casilleros digitales & duchas spa</li>
+                </ul>
+
+                <button class="btn btn-outline btn-pill p-btn select-plan-btn" data-plan="Basic Start">ELEGIR PLAN</button>
+              </div>
+
+              <!-- Plan 2: PREMIUM PERFORM (Featured) -->
+              <div class="pricing-card featured" data-tilt data-tilt-max="8">
+                <div class="popular-badge">⚡ MÁS ELEGIDO</div>
+                <div class="p-card-top">
+                  <span class="plan-tag tag-featured">RECOMENDADO</span>
+                  <h4 class="p-tier-name">PREMIUM<br><span>PERFORM</span></h4>
+                  <div class="p-price">
+                    <span class="p-currency">$</span>
+                    <span class="p-amt price-val" data-monthly="49" data-annual="39">49</span>
+                    <span class="p-period">/mes</span>
+                  </div>
+                </div>
+
+                <ul class="p-features">
+                  <li><span class="p-bullet">✓</span> Todo lo del plan Basic</li>
+                  <li><span class="p-bullet">✓</span> <strong>Rutinas personalizadas en la App</strong></li>
+                  <li><span class="p-bullet">✓</span> Seguimiento quincenal con Head Coach</li>
+                  <li><span class="p-bullet">✓</span> Acceso prioritario a todas las clases</li>
+                  <li><span class="p-bullet">✓</span> 1 Pase de Invitado VIP gratis al mes</li>
+                </ul>
+
+                <button class="btn btn-primary btn-pill p-btn glow-effect select-plan-btn" data-plan="Premium Perform">ELEGIR PLAN</button>
+              </div>
+
+              <!-- Plan 3: PRO ELITE -->
+              <div class="pricing-card" data-tilt data-tilt-max="8">
+                <div class="p-card-top">
+                  <span class="plan-tag">MÁXIMO NIVEL</span>
+                  <h4 class="p-tier-name">PRO<br><span>ELITE</span></h4>
+                  <div class="p-price">
+                    <span class="p-currency">$</span>
+                    <span class="p-amt price-val" data-monthly="79" data-annual="63">79</span>
+                    <span class="p-period">/mes</span>
+                  </div>
+                </div>
+
+                <ul class="p-features">
+                  <li><span class="p-bullet">✓</span> Todo lo de Premium Perform</li>
+                  <li><span class="p-bullet">✓</span> <strong>Asesoría nutricional 1 a 1</strong></li>
+                  <li><span class="p-bullet">✓</span> Plan de suplementación y biohacking</li>
+                  <li><span class="p-bullet">✓</span> Acceso VIP 24/7 sin restricciones</li>
+                  <li><span class="p-bullet">✓</span> Zona Spa, Sauna & Criocabina</li>
+                </ul>
+
+                <button class="btn btn-outline btn-pill p-btn select-plan-btn" data-plan="Pro Elite">ELEGIR PLAN</button>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TESTIMONIALS SECTION ================= -->
+    <section class="section testimonials-section" id="testimonios">
+      <div class="container">
+        
+        <div class="testimonials-header">
+          <div>
+            <div class="section-chip">TESTIMONIOS REALES</div>
+            <h2 class="section-title">LO QUE DICEN<br><span class="text-lime-gradient">NUESTROS MIEMBROS</span></h2>
+            <p class="section-subtitle">Historias verificadas de transformación física y mental.</p>
+          </div>
+          
+          <div class="carousel-nav-buttons">
+            <button class="carousel-btn prev-btn" id="prevTestimonial" aria-label="Anterior testimonio">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <button class="carousel-btn next-btn" id="nextTestimonial" aria-label="Siguiente testimonio">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="testimonials-track-wrapper">
+          <div class="testimonials-track" id="testimonialsTrack">
+            
+            <!-- Card 1 -->
+            <div class="testimonial-card" data-tilt data-tilt-max="6">
+              <div class="t-stars">★★★★★</div>
+              <p class="t-quote">"POWERZONE transformó por completo mi energía, salud y postura. El acompañamiento de los coaches y el detalle de la app hacen que nunca pierdas el foco ni la disciplina."</p>
+              <div class="t-author-box">
+                <div class="t-author-avatar">
+                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop" alt="Camila R.">
+                </div>
+                <div class="t-author-info">
+                  <strong>Camila Restrepo</strong>
+                  <span>Miembro activo • 10 meses</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="testimonial-card" data-tilt data-tilt-max="6">
+              <div class="t-stars">★★★★★</div>
+              <p class="t-quote">"La biomecánica de las máquinas y el enfoque de sobrecarga progresiva están a otro nivel. Estuve estancado 2 años en gimnasios comerciales y aquí rompí todos mis récords."</p>
+              <div class="t-author-box">
+                <div class="t-author-avatar">
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" alt="Carlos M.">
+                </div>
+                <div class="t-author-info">
+                  <strong>Carlos Morales</strong>
+                  <span>Miembro activo • 1.5 años</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="testimonial-card" data-tilt data-tilt-max="6">
+              <div class="t-stars">★★★★★</div>
+              <p class="t-quote">"La combinación de zona de fuerza con las tinas de hielo y sauna aceleró mi recuperación de forma increíble. El ambiente de la comunidad te contagia de motivación."</p>
+              <div class="t-author-box">
+                <div class="t-author-avatar">
+                  <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop" alt="Valentina T.">
+                </div>
+                <div class="t-author-info">
+                  <strong>Valentina Torres</strong>
+                  <span>Miembro activo • 8 meses</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= FAQ SECTION (WITH REAL-TIME SEARCH) ================= -->
+    <section class="section faq-section" id="faq">
+      <div class="container">
+        
+        <div class="faq-header-box">
+          <div class="section-chip">RESOLVEMOS TUS DUDAS</div>
+          <h2 class="section-title">PREGUNTAS <span class="text-lime-gradient">FRECUENTES</span></h2>
+          <p class="section-subtitle">Encuentra respuestas rápidas o utiliza nuestro buscador en vivo.</p>
+
+          <!-- Real-Time Search Bar -->
+          <div class="faq-search-wrap">
+            <span class="faq-search-icon">🔍</span>
+            <input type="text" class="faq-search-input" id="faqSearchInput" placeholder="Buscar preguntas (ej: permanencia, nutrición, lockers, clases)...">
+          </div>
+        </div>
+
+        <div class="faq-list" id="faqList">
+          
+          <div class="faq-item active">
+            <button class="faq-question-btn">
+              <span>¿Existe algún tipo de permanencia o cláusula de cancelación?</span>
+              <div class="faq-toggle-icon">▼</div>
+            </button>
+            <div class="faq-answer">
+              No. En POWERZONE creemos en ganarnos tu membresía mes a mes. Puedes congelar tu plan o cancelar en cualquier momento desde la App sin penalizaciones ni letras pequeñas.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn">
+              <span>¿Qué incluye el pase de prueba VIP gratuito de 1 día?</span>
+              <div class="faq-toggle-icon">▼</div>
+            </button>
+            <div class="faq-answer">
+              Incluye acceso ilimitado a todas nuestras áreas por 1 día, acceso a una clase grupal de tu elección, evaluación biomecánica básica con un coach y acceso a la zona de spa y recuperación.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn">
+              <span>¿Es necesario tener experiencia previa para entrenar en POWERZONE?</span>
+              <div class="faq-toggle-icon">▼</div>
+            </button>
+            <div class="faq-answer">
+              Para nada. Nuestro sistema adapta las cargas, rangos de movimiento y volumen de entrenamiento tanto para principiantes absolutos como para atletas competitivos de élite.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn">
+              <span>¿Cómo funciona el acompañamiento nutricional personalizado?</span>
+              <div class="faq-toggle-icon">▼</div>
+            </button>
+            <div class="faq-answer">
+              En los planes Premium y Pro Elite, nuestros nutricionistas deportivos realizan un análisis metabólico completo y estructuran tu plan de macronutrientes, adaptándolo quincenalmente según tus progresos.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn">
+              <span>¿Cuáles son los horarios de apertura de las sedes?</span>
+              <div class="faq-toggle-icon">▼</div>
+            </button>
+            <div class="faq-answer">
+              Estamos abiertos de Lunes a Viernes de 05:00 a 23:00, Sábados de 07:00 a 20:00 y Domingos/Festivos de 08:00 a 16:00. Miembros Pro Elite tienen acceso inteligente 24/7 mediante huella o app.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= CTA BANNER ================= -->
+    <section class="cta-banner-section">
+      <div class="container">
+        <div class="cta-banner-card" data-tilt data-tilt-max="5">
+          <div class="cta-runner-img">
+            <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?q=80&w=1000&auto=format&fit=crop" alt="Atleta velocista Powerzone">
+          </div>
+          
+          <div class="cta-banner-content">
+            <span class="cta-chip">EMPIEZA HOY MISMO</span>
+            <h2 class="cta-banner-title">TU PRÓXIMA VERSIÓN<br>COMIENZA AQUÍ.</h2>
+            <p class="cta-banner-sub">Agenda tu pase de prueba gratuito de 1 día y experimenta la diferencia del alto rendimiento.</p>
+          </div>
+
+          <div class="cta-banner-action">
+            <button class="btn btn-white-pill btn-xl glow-white" id="ctaBannerBtn">
+              <span>SOLICITAR PASE VIP</span>
+              <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer" id="contacto">
+    <div class="container footer-container">
+      
+      <!-- Brand & Social -->
+      <div class="footer-col brand-col">
+        <a href="#" class="logo footer-logo">
+          <div class="logo-icon-box">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+            </svg>
+          </div>
+          <span class="logo-text">POWER<span class="logo-accent">ZONE</span></span>
+        </a>
+        <p class="footer-tagline">Train. Recover. Perform. El estándar del entrenamiento de alta intensidad, biomecánica y longevidad.</p>
+        
+        <div class="footer-socials">
+          <a href="#" class="social-circle" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <a href="#" class="social-circle" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+          </a>
+          <a href="#" class="social-circle" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+          <a href="#" class="social-circle" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Links 1: ENTRENA -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">ENTRENA</h4>
+        <ul class="footer-links">
+          <li><a href="#clases">Clases Grupales</a></li>
+          <li><a href="#calculadora">Calculadora de Macros</a></li>
+          <li><a href="#metodo">The Powerzone Method</a></li>
+          <li><a href="#instalaciones">Zonas e Instalaciones</a></li>
+          <li><a href="#comunidad">Retos Mensuales</a></li>
+        </ul>
+      </div>
+
+      <!-- Links 2: COMPAÑÍA -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">COMPAÑÍA</h4>
+        <ul class="footer-links">
+          <li><a href="#inicio">Nuestra Misión</a></li>
+          <li><a href="#entrenadores">Head Coaches</a></li>
+          <li><a href="#planes">Membresías</a></li>
+          <li><a href="#faq">Preguntas Frecuentes</a></li>
+          <li><a href="#">Sedes & Horarios</a></li>
+        </ul>
+      </div>
+
+      <!-- Links 3: COMUNIDAD -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">COMUNIDAD</h4>
+        <ul class="footer-links">
+          <li><a href="#comunidad">Powerzone Challenge</a></li>
+          <li><a href="#clases">Casos de Éxito</a></li>
+          <li><a href="#">Eventos & Workshops</a></li>
+          <li><a href="#">Comunidad Discord</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter Column -->
+      <div class="footer-col newsletter-col">
+        <h4 class="footer-col-title">ÚNETE AL NEWSLETTER</h4>
+        <p class="newsletter-sub">Recibe guías de nutrición, biomecánica y promociones exclusivas.</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="Ingresa tu correo..." required class="newsletter-input">
+          <button type="submit" class="newsletter-submit-btn" aria-label="Suscribirse">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </form>
+      </div>
+
+    </div>
+
+    <!-- Bottom Copyright Bar -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <p class="copyright">© 2026 POWERZONE Athletic Club. Todos los derechos reservados.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacidad</a>
+          <a href="#">Términos</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= FLOATING WHATSAPP BUTTON ================= -->
+  <a href="https://wa.me/573133340054?text=Hola%20POWERZONE%2C%20quiero%20informaci%C3%B3n" target="_blank" rel="noopener" class="whatsapp-fab" id="whatsappFab" aria-label="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+      <path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.44 9.9-9.9 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.1a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.19-.31a8.22 8.22 0 0 1-1.27-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.55-3.7 8.23-8.25 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.4-.12-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.04-.38-1.99-1.22-.73-.66-1.23-1.46-1.37-1.71-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43-.14-.01-.31-.01-.48-.01a.92.92 0 0 0-.67.31c-.23.25-.87.85-.87 2.08 0 1.23.89 2.41 1.02 2.58.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.11-.23-.17-.48-.29z"/>
+    </svg>
+    <span class="whatsapp-fab-pulse"></span>
+  </a>
+
+  <!-- ================= LIVE ACTIVITY TOAST NOTIFICATION CONTAINER ================= -->
+  <div class="live-toast-container">
+    <div class="live-toast" id="liveToast">
+      <div class="toast-avatar" id="toastAvatar">🔥</div>
+      <div class="toast-text">
+        <strong id="toastTitle">Mateo R. acaba de reservar clase</strong>
+        <small id="toastSub">HIIT Metabolic Burn • Hace 2 min</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= INTERACTIVE VIP PASS / BOOKING MODAL ================= -->
+  <div class="modal-overlay" id="bookingModal">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="modalCloseBtn">&times;</button>
+      
+      <div class="modal-header">
+        <span class="modal-chip" id="modalChip">RESERVA INSTANTÁNEA</span>
+        <h3 class="modal-title" id="modalTitle">Pase VIP de 1 Día</h3>
+        <p class="modal-sub" id="modalSub">Completa tus datos para recibir tu acceso gratuito a POWERZONE.</p>
+      </div>
+
+      <form class="modal-form" id="bookingForm">
+        <div class="calc-input-group">
+          <label>Nombre Completo</label>
+          <div class="calc-input-wrap">
+            <input type="text" id="bookingName" placeholder="Tu nombre..." required>
+          </div>
+        </div>
+
+        <div class="calc-input-group">
+          <label>Correo Electrónico</label>
+          <div class="calc-input-wrap">
+            <input type="email" id="bookingEmail" placeholder="tu@email.com" required>
+          </div>
+        </div>
+
+        <div class="calc-input-group">
+          <label>Teléfono WhatsApp</label>
+          <div class="calc-input-wrap">
+            <input type="tel" id="bookingPhone" placeholder="+57 300 1234567" required>
+          </div>
+        </div>
+
+        <div class="calc-input-group">
+          <label>Objetivo Principal</label>
+          <div class="calc-input-wrap">
+            <select id="bookingGoal">
+              <option value="Ganar Músculo">Ganar Músculo & Fuerza</option>
+              <option value="Perder Grasa">Perder Grasa & Definición</option>
+              <option value="Rendimiento Deportivo">Rendimiento Deportivo Híbrido</option>
+              <option value="Movilidad & Salud">Movilidad & Recuperación</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-pill btn-lg glow-effect" style="width: 100%; margin-top: 10px;">
+          <span>CONFIRMAR MI PASE VIP GRATIS ⚡</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modern Libraries via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+  
+  <script src="main.js"></script>
+</body>
+</html>

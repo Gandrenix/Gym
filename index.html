@@ -3,52 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>POWERZONE | Supera Tus Límites - Centro de Alto Rendimiento</title>
-  <meta name="description" content="Entrena, supérate y transforma tu vida en Powerzone. Planes personalizados, entrenadores de élite y tecnología de vanguardia para tu máximo rendimiento.">
-  
+  <title>POWERZONE ⚡ | Centro de Alto Rendimiento & Entrenamiento Biomecánico</title>
+  <meta name="description" content="Centro de Alto Rendimiento Powerzone. Entrenamiento bio-inteligente, tecnología biomecánica de vanguardia, coaches certificados y comunidad de élite.">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
   <!-- FontAwesome 6 Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  
+
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
 
-  <!-- Floating Vertical Social Links -->
-  <div class="floating-socials">
-    <a href="#instagram" class="social-icon-btn" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-    <a href="#facebook" class="social-icon-btn" title="Facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-    <a href="#youtube" class="social-icon-btn" title="YouTube" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-  </div>
+  <!-- Top Scroll Reading Indicator -->
+  <div id="scroll-progress"></div>
 
-  <!-- Header Navigation -->
+  <!-- Background Cyber Particle Canvas & Grid Overlay -->
+  <canvas id="cyber-particles-canvas"></canvas>
+  <div class="cyber-grid-overlay"></div>
+  <div class="ambient-glow-1 anim-ambient-glow"></div>
+  <div class="ambient-glow-2 anim-ambient-glow"></div>
+
+  <!-- Header Navigation (Capsule Bar) -->
   <header class="site-header">
-    <div class="container nav-container">
-      <a href="#" class="brand-logo">
-        <i class="fa-solid fa-bolt bolt"></i>
-        <span>POWERZONE</span>
-      </a>
+    <div class="container">
+      <nav class="nav-capsule">
+        <a href="#inicio" class="brand-logo" aria-label="Powerzone Inicio">
+          <i class="fa-solid fa-bolt bolt"></i>
+          <span>POWERZONE</span>
+        </a>
 
-      <nav>
         <ul class="nav-menu">
           <li><a href="#inicio" class="nav-link active">Inicio</a></li>
-          <li><a href="#clases" class="nav-link">Clases</a></li>
+          <li><a href="#objetivos" class="nav-link">Objetivos</a></li>
+          <li><a href="#rutinas" class="nav-link">Anatomía</a></li>
+          <li><a href="#calculadora" class="nav-link">Calculadora</a></li>
+          <li><a href="#instalaciones" class="nav-link">Sede</a></li>
+          <li><a href="#clases" class="nav-link">Horarios</a></li>
           <li><a href="#planes" class="nav-link">Planes</a></li>
-          <li><a href="#entrenadores" class="nav-link">Entrenadores</a></li>
-          <li><a href="#blog" class="nav-link">Blog</a></li>
-          <li><a href="#contacto" class="nav-link">Contacto</a></li>
+          <li class="mobile-cta-item"><a href="#planes" class="btn btn-primary btn-block">ÚNETE AHORA</a></li>
         </ul>
-      </nav>
 
-      <div class="header-cta">
-        <a href="#planes" class="btn btn-primary">ÚNETE AHORA</a>
-      </div>
+        <div class="header-actions">
+          <!-- Live System Status -->
+          <div class="system-status-pill">
+            <span class="status-dot"></span>
+            <span>SISTEMA: EN LÍNEA</span>
+          </div>
+
+          <!-- Sound FX Toggle Button -->
+          <button id="btn-audio-toggle" class="audio-toggle-btn" title="Activar/Desactivar Efectos de Sonido" aria-label="Sonido">
+            <i class="fa-solid fa-volume-high"></i>
+          </button>
+
+          <a href="#planes" class="btn btn-primary btn-sm">ÚNETE AHORA</a>
+          <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Abrir Menú"><i class="fa-solid fa-bars"></i></button>
+        </div>
+      </nav>
     </div>
   </header>
 
@@ -57,100 +73,120 @@
     <section id="inicio" class="hero-section">
       <div class="container">
         <div class="hero-grid">
-          
-          <!-- Left: Hero Text Content -->
+
+          <!-- Left: Hero Headline & CTA -->
           <div class="hero-content">
-            <p class="hero-tagline">ENTRENA. SUPÉRATE. TRANSFORMA TU VIDA.</p>
+            <div class="hero-tagline-badge">
+              <i class="fa-solid fa-microchip"></i>
+              <span>SISTEMA DE RENDIMIENTO BIOMECÁNICO</span>
+            </div>
+
             <h1 class="hero-title">
               SUPERA <br>
-              <span class="text-neon">TUS LÍMITES.</span>
+              <span class="gradient-text">TUS LÍMITES</span> <br>
+              <span class="text-neon">SIN EXCUSAS.</span>
             </h1>
 
+            <p class="hero-desc">
+              Entrenamiento de alta precisión con tecnología biométrica en tiempo real, nutrición inteligente y programación personalizada para atletas exigentes.
+            </p>
+
             <div class="hero-actions">
-              <a href="#planes" class="btn btn-primary">COMIENZA HOY</a>
-              <a href="#planes" class="btn btn-outline">VER PLANES</a>
+              <a href="#planes" class="btn btn-primary" id="hero-btn-start"><i class="fa-solid fa-bolt"></i> COMIENZA HOY</a>
+              <a href="#calculadora" class="btn btn-outline"><i class="fa-solid fa-calculator"></i> CALCULAR SCORE</a>
             </div>
 
             <!-- Stats Strip -->
             <div class="hero-stats">
               <div class="hero-stat-item">
-                <div class="stat-num">+1500</div>
-                <div class="stat-label">Miembros activos</div>
+                <div class="stat-num text-neon">+1500</div>
+                <div class="stat-label">Atletas Activos</div>
               </div>
               <div class="hero-stat-item">
                 <div class="stat-num">50+</div>
-                <div class="stat-label">Clases semanales</div>
+                <div class="stat-label">Clases Semanales</div>
               </div>
               <div class="hero-stat-item">
-                <div class="stat-num">10+</div>
-                <div class="stat-label">Entrenadores</div>
+                <div class="stat-num text-cyan">100%</div>
+                <div class="stat-label">Bio-Tracking</div>
               </div>
               <div class="hero-stat-item">
-                <div class="stat-num">98%</div>
-                <div class="stat-label">Resultados reales</div>
+                <div class="stat-num">98.4%</div>
+                <div class="stat-label">Éxito Comprobado</div>
               </div>
             </div>
           </div>
 
-          <!-- Center: Hero Visual -->
+          <!-- Center: Hero Visual with Scanning Laser -->
           <div class="hero-visual">
             <div class="hero-image-wrapper">
               <img src="assets/images/hero_athlete.jpg" alt="Atleta de Alto Rendimiento Powerzone" loading="eager">
+              <div class="laser-scanline"></div>
+
+              <!-- Biometric Badges (Positioned Safely Inside the Frame) -->
+              <div class="bio-tag bio-tag-1">
+                <i class="fa-solid fa-heart-pulse text-neon"></i> VO2 MÁX: <strong>58.4 mL/kg</strong>
+              </div>
+              <div class="bio-tag bio-tag-2">
+                <i class="fa-solid fa-gauge-high text-cyan"></i> POTENCIA/PESO: <strong>4.2 W/KG</strong>
+              </div>
             </div>
           </div>
 
-          <!-- Right: Hero HUD Card (Powerzone Performance System) -->
+          <!-- Right: Hero HUD Performance Card -->
           <div class="hero-hud">
             <div class="hud-card anim-hud-float">
               <div class="hud-header">
-                <div class="hud-title-wrap">
-                  <div class="hud-brand">POWERZONE</div>
-                  <div class="hud-sub">PERFORMANCE SYSTEM</div>
+                <div>
+                  <div class="hud-brand">SISTEMA POWERZONE</div>
+                  <div class="hud-sub">MOTOR BIOMÉTRICO v4.2</div>
                 </div>
-                <i class="fa-solid fa-battery-three-quarters text-neon" style="font-size: 0.85rem;"></i>
+                <i class="fa-solid fa-battery-three-quarters text-neon" style="font-size: 1rem;"></i>
               </div>
 
-              <div class="hud-score-display">
-                <div class="hud-score-big">92%</div>
-                <div class="hud-score-badge"><i class="fa-solid fa-bolt text-neon"></i> PERFORMANCE</div>
+              <!-- Zone Switch Buttons -->
+              <div class="hud-zone-selector">
+                <button class="zone-switch-btn" data-zone="rest">REPOSO (68 LPM)</button>
+                <button class="zone-switch-btn active" data-zone="fatburn">QUEMA GRASA (142 LPM)</button>
+                <button class="zone-switch-btn" data-zone="peak">MÁXIMA POTENCIA (178 LPM)</button>
               </div>
 
-              <!-- Metric Bars -->
+              <!-- Live Dynamic ECG Canvas -->
+              <div class="hud-ecg-container">
+                <canvas id="hud-ecg-canvas" class="hud-ecg-canvas"></canvas>
+                <div class="hud-bpm-overlay">
+                  <i class="fa-solid fa-heart-pulse text-neon anim-heartbeat"></i>
+                  <span id="hud-live-bpm">142</span> LPM
+                  <span id="hud-zone-name" class="zone-pill zone-fatburn">ZONA 4 • QUEMA DE GRASA</span>
+                </div>
+              </div>
+
+              <!-- Metric Progress Bars -->
               <div class="hud-metrics">
                 <div class="hud-metric-row">
                   <div class="metric-meta">
-                    <span>FUERZA</span>
-                    <span>87%</span>
+                    <span>FUERZA & HIPERTROFIA</span>
+                    <span class="text-neon">88%</span>
                   </div>
                   <div class="metric-progress-bg">
-                    <div class="metric-progress-fill" style="width: 87%;"></div>
+                    <div class="metric-progress-fill" style="width: 88%;"></div>
                   </div>
                 </div>
 
                 <div class="hud-metric-row">
                   <div class="metric-meta">
-                    <span>RESISTENCIA</span>
-                    <span>94%</span>
+                    <span>RESISTENCIA CARDIOVASCULAR</span>
+                    <span class="text-cyan">94%</span>
                   </div>
                   <div class="metric-progress-bg">
-                    <div class="metric-progress-fill" style="width: 94%;"></div>
+                    <div class="metric-progress-fill" style="width: 94%; background: linear-gradient(90deg, #00f0ff, #ccff00);"></div>
                   </div>
                 </div>
 
                 <div class="hud-metric-row">
                   <div class="metric-meta">
-                    <span>MOVILIDAD</span>
-                    <span>78%</span>
-                  </div>
-                  <div class="metric-progress-bg">
-                    <div class="metric-progress-fill" style="width: 78%;"></div>
-                  </div>
-                </div>
-
-                <div class="hud-metric-row">
-                  <div class="metric-meta">
-                    <span>POTENCIA</span>
-                    <span>91%</span>
+                    <span>POTENCIA EXPLOSIVA</span>
+                    <span class="text-neon">91%</span>
                   </div>
                   <div class="metric-progress-bg">
                     <div class="metric-progress-fill" style="width: 91%;"></div>
@@ -158,14 +194,15 @@
                 </div>
               </div>
 
-              <!-- Real-time ECG Wave Canvas -->
-              <div class="hud-ecg-container">
-                <canvas id="hud-ecg-canvas" class="hud-ecg-canvas"></canvas>
-              </div>
-
-              <div class="hud-calories">
-                <span>CALORÍAS</span>
-                <div class="cal-num">862 <span>KCAL</span></div>
+              <!-- HUD Footer Stats -->
+              <div class="hud-footer-stats">
+                <div class="hud-cal-display">
+                  <span>GASTO ESTIMADO:</span>
+                  <div class="hud-cal-num">864 <span style="font-size: 0.75rem; color: #fff;">KCAL</span></div>
+                </div>
+                <button class="btn btn-outline btn-sm btn-booking" style="padding: 6px 12px; font-size: 0.72rem;">
+                  <i class="fa-solid fa-qrcode"></i> VINCULAR PULSÓMETRO
+                </button>
               </div>
             </div>
           </div>
@@ -174,388 +211,569 @@
       </div>
     </section>
 
-    <!-- 2. ¿QUÉ ESTÁS BUSCANDO? -->
-    <section class="section-padding">
+    <!-- 2. INFINITE ATHLETIC TICKER MARQUEE -->
+    <div class="ticker-strip">
+      <div class="ticker-track">
+        <span class="ticker-item"><i class="fa-solid fa-bolt text-neon"></i> ENTRENAMIENTO CERTIFICADO HYROX</span>
+        <span class="ticker-item"><i class="fa-solid fa-circle-dot text-cyan"></i> MONITOREO BIOMÉTRICO EN TIEMPO REAL</span>
+        <span class="ticker-item"><i class="fa-solid fa-dumbbell text-neon"></i> +1200M² DE INSTALACIONES DE ÉLITE</span>
+        <span class="ticker-item"><i class="fa-solid fa-crown text-magenta"></i> COACHES INTERNACIONALES CERTIFICADOS</span>
+        <span class="ticker-item"><i class="fa-solid fa-fire text-neon"></i> PROGRAMACIÓN PERSONALIZADA 1 A 1</span>
+        <span class="ticker-item"><i class="fa-solid fa-bolt text-neon"></i> ENTRENAMIENTO CERTIFICADO HYROX</span>
+        <span class="ticker-item"><i class="fa-solid fa-circle-dot text-cyan"></i> MONITOREO BIOMÉTRICO EN TIEMPO REAL</span>
+        <span class="ticker-item"><i class="fa-solid fa-dumbbell text-neon"></i> +1200M² DE INSTALACIONES DE ÉLITE</span>
+      </div>
+    </div>
+
+    <!-- 3. GOAL MATRIX: ¿QUÉ ESTÁS BUSCANDO? -->
+    <section id="objetivos" class="section-padding">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">¿QUÉ ESTÁS <span class="text-neon">BUSCANDO?</span></h2>
+          <span class="section-subtitle">PROGRAMACIÓN OBJETIVO</span>
+          <h2 class="section-title">¿CUÁL ES TU <span class="text-neon">ENFOQUE PRINCIPAL?</span></h2>
         </div>
 
         <div class="categories-grid">
           <!-- Card 1: Ganar Músculo -->
-          <div class="goal-card">
+          <div class="goal-card-3d" data-goal="hipertrofia">
             <div class="goal-card-bg">
               <img src="assets/images/muscle_gain.jpg" alt="Ganar Músculo">
             </div>
-            <div class="goal-card-corner"></div>
+            <div class="goal-card-overlay"></div>
             <div class="goal-card-content">
+              <span class="goal-card-badge">INTENSIDAD: ALTA • 4-5 DÍAS</span>
               <h3 class="goal-card-title">GANAR MÚSCULO</h3>
-              <p class="goal-card-desc">Fuerza e hipertrofia<br>4-5 sesiones / semana</p>
-              <div class="goal-card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+              <p class="goal-card-desc">Sobrecarga progresiva, hipertrofia miofibrilar y nutrición anabólica dirigida.</p>
+              <div class="goal-card-footer">
+                <span class="goal-card-action">SELECCIONAR ENFOQUE</span>
+                <div class="goal-card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+              </div>
             </div>
           </div>
 
           <!-- Card 2: Perder Grasa -->
-          <div class="goal-card">
+          <div class="goal-card-3d" data-goal="grasa">
             <div class="goal-card-bg">
               <img src="assets/images/fat_loss.jpg" alt="Perder Grasa">
             </div>
-            <div class="goal-card-corner"></div>
+            <div class="goal-card-overlay"></div>
             <div class="goal-card-content">
-              <h3 class="goal-card-title">PERDER GRASA</h3>
-              <p class="goal-card-desc">Déficit inteligente<br>3-4 sesiones / semana</p>
-              <div class="goal-card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+              <span class="goal-card-badge">INTENSIDAD: MEDIA-ALTA • 4 DÍAS</span>
+              <h3 class="goal-card-title">PÉRDIDA DE GRASA</h3>
+              <p class="goal-card-desc">Déficit calórico inteligente preservando masa muscular y acelerando el metabolismo basal.</p>
+              <div class="goal-card-footer">
+                <span class="goal-card-action">SELECCIONAR ENFOQUE</span>
+                <div class="goal-card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+              </div>
             </div>
           </div>
 
-          <!-- Card 3: Mejorar Movilidad -->
-          <div class="goal-card">
-            <div class="goal-card-bg">
-              <img src="assets/images/mobility.jpg" alt="Mejorar Movilidad">
-            </div>
-            <div class="goal-card-corner"></div>
-            <div class="goal-card-content">
-              <h3 class="goal-card-title">MEJORAR MOVILIDAD</h3>
-              <p class="goal-card-desc">Movimiento y recuperación<br>3-4 sesiones / semana</p>
-              <div class="goal-card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-            </div>
-          </div>
-
-          <!-- Card 4: Rendimiento Deportivo -->
-          <div class="goal-card">
+          <!-- Card 3: Rendimiento Deportivo & Hyrox -->
+          <div class="goal-card-3d" data-goal="rendimiento">
             <div class="goal-card-bg">
               <img src="assets/images/performance.jpg" alt="Rendimiento Deportivo">
             </div>
-            <div class="goal-card-corner"></div>
+            <div class="goal-card-overlay"></div>
             <div class="goal-card-content">
-              <h3 class="goal-card-title">RENDIMIENTO DEPORTIVO</h3>
-              <p class="goal-card-desc">Potencia y explosividad<br>4-5 sesiones / semana</p>
-              <div class="goal-card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+              <span class="goal-card-badge">INTENSIDAD: MÁXIMA • 5 DÍAS</span>
+              <h3 class="goal-card-title">HYROX & POTENCIA</h3>
+              <p class="goal-card-desc">Potencia explosiva, capacidad aeróbica/anaeróbica y acondicionamiento para competición.</p>
+              <div class="goal-card-footer">
+                <span class="goal-card-action">SELECCIONAR ENFOQUE</span>
+                <div class="goal-card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Movilidad & Longevidad -->
+          <div class="goal-card-3d" data-goal="movilidad">
+            <div class="goal-card-bg">
+              <img src="assets/images/mobility.jpg" alt="Movilidad y Recuperación">
+            </div>
+            <div class="goal-card-overlay"></div>
+            <div class="goal-card-content">
+              <span class="goal-card-badge">INTENSIDAD: MODERADA • 3 DÍAS</span>
+              <h3 class="goal-card-title">MOVILIDAD & RECOVERY</h3>
+              <p class="goal-card-desc">Rango articular, descompresión espinal, prevención de lesiones y recuperación miofascial.</p>
+              <div class="goal-card-footer">
+                <span class="goal-card-action">SELECCIONAR ENFOQUE</span>
+                <div class="goal-card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 3. TU PROGRAMA PERSONALIZADO & POWERZONE SCORE -->
-    <section class="section-padding">
+    <!-- 4. ANATOMÍA INTERACTIVA & CONSTRUCTOR DE RUTINA -->
+    <section id="rutinas" class="section-padding">
       <div class="container">
-        <div class="program-score-grid">
-          
-          <!-- Left: Tu Programa Personalizado -->
-          <div class="custom-card">
-            <div class="section-header">
-              <h2 class="section-title">TU PROGRAMA <span class="text-neon">PERSONALIZADO</span></h2>
-            </div>
+        <div class="section-header">
+          <span class="section-subtitle">BIOMECÁNICA APLICADA</span>
+          <h2 class="section-title">ANATOMÍA ACTIVA & <span class="text-neon">DESGLOSE DE RUTINA</span></h2>
+        </div>
 
-            <!-- Filter Pills -->
-            <div class="program-filters">
-              <div class="filter-pill-row">
-                <div class="filter-pill active"><i class="fa-solid fa-check check-icon"></i> OBJETIVO: HIPERTROFIA</div>
-                <div class="filter-pill active"><i class="fa-solid fa-check check-icon"></i> NIVEL: INTERMEDIO</div>
-                <div class="filter-pill active"><i class="fa-solid fa-check check-icon"></i> FRECUENCIA: 4 DÍAS / SEMANA</div>
-              </div>
-            </div>
-
-            <!-- Day Cards Grid -->
-            <div class="days-grid">
-              <!-- LUN -->
-              <div class="day-card active" data-day="Lunes">
-                <div class="day-label">LUN</div>
-                <div class="day-focus">PUSH</div>
-                <div class="day-thumb">
-                  <img src="assets/images/muscle_gain.jpg" alt="Push">
-                </div>
+        <div class="anatomy-routine-grid">
+          <!-- Left: Split Selector & Interactive Anatomical Silhouette Display -->
+          <div class="anatomy-interactive-box">
+            <div>
+              <div class="split-selector-tabs">
+                <button class="split-tab-btn active" data-split="push">LUN • EMPUJE (PUSH)</button>
+                <button class="split-tab-btn" data-split="legs">MAR • PIERNA (LEGS)</button>
+                <button class="split-tab-btn" data-split="recovery">MIÉ • RECUPERACIÓN</button>
+                <button class="split-tab-btn" data-split="pull">JUE • TRACCIÓN (PULL)</button>
+                <button class="split-tab-btn" data-split="fullbody">VIE • HÍBRIDO</button>
               </div>
 
-              <!-- MAR -->
-              <div class="day-card" data-day="Martes">
-                <div class="day-label">MAR</div>
-                <div class="day-focus">LEGS</div>
-                <div class="day-thumb">
-                  <img src="assets/images/fat_loss.jpg" alt="Legs">
-                </div>
-              </div>
+              <div class="anatomy-display-row">
+                <!-- Detailed Anatomical SVG Silhouette with Forearms & Hands -->
+                <div class="muscle-svg-wrap">
+                  <svg class="muscle-svg" viewBox="0 0 240 360">
+                    <!-- Head, Jaw, Neck -->
+                    <circle cx="120" cy="24" r="14" fill="#141a24" stroke="#2a374a" stroke-width="1.2"/>
+                    <path d="M108,28 L114,44 L126,44 L132,28 Z" fill="#141a24" stroke="#2a374a" stroke-width="1.2"/>
+                    <path d="M113,44 L111,58 L129,58 L127,44 Z" fill="#141a24" stroke="#2a374a" stroke-width="1.2"/>
 
-              <!-- MIÉ -->
-              <div class="day-card" data-day="Miércoles">
-                <div class="day-label">MIÉ</div>
-                <div class="day-focus">RECOVERY</div>
-                <div class="day-recovery-box">
-                  <i class="fa-solid fa-heart-pulse"></i>
-                </div>
-              </div>
+                    <!-- Trapezius / Neck -->
+                    <path id="muscle-traps" class="muscle-group active" d="M110,48 L88,66 L108,68 Z M130,48 L152,66 L132,68 Z"/>
 
-              <!-- JUE -->
-              <div class="day-card" data-day="Jueves">
-                <div class="day-label">JUE</div>
-                <div class="day-focus">PULL</div>
-                <div class="day-thumb">
-                  <img src="assets/images/hero_athlete.jpg" alt="Pull">
-                </div>
-              </div>
+                    <!-- Shoulders / Deltoids -->
+                    <path id="muscle-shoulders" class="muscle-group active" d="M86,66 Q68,68 66,90 L80,96 L88,70 Z M154,66 Q172,68 174,90 L160,96 L152,70 Z"/>
 
-              <!-- VIE -->
-              <div class="day-card" data-day="Viernes">
-                <div class="day-label">VIE</div>
-                <div class="day-focus">FULL BODY</div>
-                <div class="day-thumb">
-                  <img src="assets/images/performance.jpg" alt="Full Body">
-                </div>
-              </div>
-            </div>
+                    <!-- Chest / Pectorals -->
+                    <path id="muscle-chest" class="muscle-group active" d="M89,70 L118,70 L117,106 Q100,110 85,94 Z M151,70 L122,70 L123,106 Q140,110 155,94 Z"/>
 
-            <!-- Expected Progress Bar -->
-            <div class="expected-progress">
-              <span class="prog-label">PROGRESO ESPERADO</span>
-              <div class="prog-bar-wrap">
-                <div class="prog-bar-fill"></div>
-              </div>
-              <span class="prog-percent">82%</span>
-            </div>
-          </div>
+                    <!-- Upper Arms / Biceps & Triceps -->
+                    <path id="muscle-arms" class="muscle-group active" d="M66,92 L79,97 L74,138 L58,134 Q58,112 66,92 Z M174,92 L161,97 L166,138 L182,134 Q182,112 174,92 Z"/>
 
-          <!-- Right: Tu Powerzone Score -->
-          <div class="custom-card">
-            <div class="score-card-layout">
-              <div>
-                <div class="section-header">
-                  <h2 class="section-title">TU <span class="text-neon">POWERZONE SCORE</span></h2>
+                    <!-- Forearms / Antebrazos (Sculpted Anatomical Detail) -->
+                    <path id="muscle-forearms" class="muscle-group" d="M58,136 L74,140 L68,188 L50,182 Q48,158 58,136 Z M182,136 L166,140 L172,188 L190,182 Q192,158 182,136 Z"/>
+
+                    <!-- Hands & Wrists / Manos (Sculpted Anatomical Detail) -->
+                    <path id="muscle-hands" class="muscle-group" d="M50,184 L68,190 L64,212 Q56,220 48,210 Q44,198 50,184 Z M190,184 L172,190 L176,212 Q184,220 192,210 Q196,198 190,184 Z"/>
+
+                    <!-- Back / Latissimus Dorsi (Lats) -->
+                    <path id="muscle-back" class="muscle-group" d="M84,96 L88,116 L84,150 L100,152 L98,108 Z M156,96 L152,116 L156,150 L140,152 L142,108 Z"/>
+
+                    <!-- Core / Six-Pack Abs & Obliques -->
+                    <path id="muscle-abs" class="muscle-group" d="M102,110 L118,110 L118,126 L102,126 Z M122,110 L138,110 L138,126 L122,126 Z M103,129 L118,129 L118,145 L103,145 Z M122,129 L137,129 L137,145 L122,145 Z M104,148 L118,148 L118,166 L104,166 Z M122,148 L136,148 L136,166 L122,166 Z M88,118 L98,114 L100,164 L86,158 Z M152,118 L142,114 L140,164 L154,158 Z"/>
+
+                    <!-- Glutes & Pelvis -->
+                    <path id="muscle-glutes" class="muscle-group" d="M86,160 L154,160 L148,194 L120,200 L92,194 Z"/>
+
+                    <!-- Quadriceps & Upper Legs -->
+                    <path id="muscle-quads" class="muscle-group" d="M90,196 L118,200 L112,270 L84,266 Q78,228 90,196 Z M150,196 L122,200 L128,270 L156,266 Q162,228 150,196 Z"/>
+
+                    <!-- Knees / Patella -->
+                    <path d="M86,268 L110,272 L108,282 L88,280 Z" fill="#141a24" stroke="#2a374a" stroke-width="1.2"/>
+                    <path d="M154,268 L130,272 L132,282 L152,280 Z" fill="#141a24" stroke="#2a374a" stroke-width="1.2"/>
+
+                    <!-- Calves & Shins / Gemelos -->
+                    <path id="muscle-calves" class="muscle-group" d="M86,282 L108,284 L102,338 L88,336 Q78,308 86,282 Z M154,282 L132,284 L138,338 L152,336 Q162,308 154,282 Z"/>
+
+                    <!-- Feet & Ankles -->
+                    <path d="M86,338 L102,340 L106,352 L76,352 Q80,342 86,338 Z" fill="#141a24" stroke="#2a374a" stroke-width="1.2"/>
+                    <path d="M154,338 L138,340 L134,352 L164,352 Q160,342 154,338 Z" fill="#141a24" stroke="#2a374a" stroke-width="1.2"/>
+                  </svg>
+                  <span style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--color-text-muted); display: block; margin-top: 8px;">
+                    MÚSCULOS OBJETIVO ACTIVOS EN NEÓN
+                  </span>
                 </div>
 
-                <div class="score-main-display">
-                  <!-- Circular Radial Donut -->
-                  <div class="radial-score-box">
-                    <svg class="radial-score-svg" viewBox="0 0 120 120">
-                      <circle class="radial-bg" cx="60" cy="60" r="50"></circle>
-                      <circle class="radial-meter" cx="60" cy="60" r="50"></circle>
-                    </svg>
-                    <div class="radial-center-text">
-                      <span class="radial-score-val">87</span>
-                      <span class="radial-score-sub">PERFORMANCE</span>
+                <!-- Routine Breakdown -->
+                <div class="routine-breakdown" id="routine-list-box">
+                  <div class="exercise-item">
+                    <div>
+                      <div class="exercise-name">Press Inclinado con Mancuernas</div>
+                      <div style="font-size: 0.72rem; color: var(--color-text-muted);">Enfoque clavicular & fuerza</div>
                     </div>
+                    <div class="exercise-meta">4 SERIES × 8-10 REPS</div>
                   </div>
 
-                  <!-- Breakdown List -->
-                  <div class="score-breakdown-list">
-                    <div class="score-stat-row">
-                      <span>FUERZA</span>
-                      <span id="stat-fuerza-val">92</span>
+                  <div class="exercise-item">
+                    <div>
+                      <div class="exercise-name">Press Militar con Barra Olímpica</div>
+                      <div style="font-size: 0.72rem; color: var(--color-text-muted);">Deltoides anterior y lateral</div>
                     </div>
-                    <div class="score-stat-row">
-                      <span>RESISTENCIA</span>
-                      <span id="stat-resistencia-val">81</span>
+                    <div class="exercise-meta">4 SERIES × 6-8 REPS</div>
+                  </div>
+
+                  <div class="exercise-item">
+                    <div>
+                      <div class="exercise-name">Fondos en Paralelas Lastrados</div>
+                      <div style="font-size: 0.72rem; color: var(--color-text-muted);">Pectoral inferior y tríceps</div>
                     </div>
-                    <div class="score-stat-row">
-                      <span>MOVILIDAD</span>
-                      <span id="stat-movilidad-val">76</span>
+                    <div class="exercise-meta">3 SERIES × 10-12 REPS</div>
+                  </div>
+
+                  <div class="exercise-item">
+                    <div>
+                      <div class="exercise-name">Elevaciones Laterales en Polea</div>
+                      <div style="font-size: 0.72rem; color: var(--color-text-muted);">Tensión constante deltoides</div>
                     </div>
-                    <div class="score-stat-row">
-                      <span>POTENCIA</span>
-                      <span id="stat-potencia-val">89</span>
-                    </div>
-                    <div class="score-stat-row">
-                      <span>RECUPERACIÓN</span>
-                      <span id="stat-recuperacion-val">84</span>
-                    </div>
+                    <div class="exercise-meta">3 SERIES × 15 REPS</div>
                   </div>
                 </div>
               </div>
+            </div>
 
-              <button id="btn-open-calc" class="btn btn-primary btn-block">CALCULA TU SCORE</button>
+            <div style="margin-top: 20px; display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--neon-lime);">VOLUMEN SEMANAL TOTAL: 18 SERIES EFECTIVAS</span>
+              <button class="btn btn-primary btn-sm btn-booking">DESCARGAR PROGRAMACIÓN</button>
             </div>
           </div>
 
+          <!-- Right: Interactive Powerzone Score & Guided Diagnostic Assessment -->
+          <div class="cyber-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div class="section-header">
+                <span class="section-subtitle">DIAGNÓSTICO ATLÉTICO INTEGRAL</span>
+                <h3 class="section-title" style="font-size: 1.55rem;">TU POWERZONE <span class="text-neon">SCORE</span></h3>
+                <p style="font-size: 0.76rem; color: var(--color-text-muted); margin-top: 4px;">
+                  Índice de capacidad física compuesto por 4 pilares: Fuerza, Resistencia aeróbica, Movilidad y Potencia neuromuscular.
+                </p>
+              </div>
+
+              <div style="display: flex; align-items: center; justify-content: space-around; margin: 20px 0;">
+                <!-- Radial Score Donut -->
+                <div class="radial-score-box">
+                  <svg class="radial-score-svg" viewBox="0 0 160 160">
+                    <defs>
+                      <linearGradient id="scoreGlowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#00f0ff" />
+                        <stop offset="100%" stop-color="#ccff00" />
+                      </linearGradient>
+                      <filter id="neonScoreGlow" x="-30%" y="-30%" width="160%" height="160%">
+                        <feGaussianBlur stdDeviation="6" result="glow" />
+                        <feMerge>
+                          <feMergeNode in="glow" />
+                          <feMergeNode in="SourceGraphic" />
+                        </feMerge>
+                      </filter>
+                    </defs>
+                    <!-- Background Circle Track -->
+                    <circle cx="80" cy="80" r="60" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="12"></circle>
+                    <!-- Animated Radial Meter with Smooth Rounded Caps -->
+                    <circle class="radial-meter" cx="80" cy="80" r="60" fill="none" stroke="url(#scoreGlowGradient)" stroke-width="12" stroke-linecap="round" transform="rotate(-90 80 80)" filter="url(#neonScoreGlow)" style="stroke-dasharray: 377; stroke-dashoffset: 49; transition: stroke-dashoffset 1s cubic-bezier(0.16, 1, 0.3, 1);"></circle>
+                  </svg>
+                  <div class="radial-score-content">
+                    <div class="radial-score-val">87</div>
+                    <div class="radial-score-sub">PUNTOS / 100</div>
+                  </div>
+                </div>
+
+                <!-- Stats Breakdown Mini List -->
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                  <div style="font-family: var(--font-mono); font-size: 0.72rem; display: flex; gap: 14px; justify-content: space-between;">
+                    <span style="color: var(--color-text-muted);">FUERZA (1RM):</span>
+                    <strong class="text-neon" id="stat-fuerza-val">92 PTS</strong>
+                  </div>
+                  <div style="font-family: var(--font-mono); font-size: 0.72rem; display: flex; gap: 14px; justify-content: space-between;">
+                    <span style="color: var(--color-text-muted);">CARDIO (VO2):</span>
+                    <strong class="text-cyan" id="stat-resistencia-val">81 PTS</strong>
+                  </div>
+                  <div style="font-family: var(--font-mono); font-size: 0.72rem; display: flex; gap: 14px; justify-content: space-between;">
+                    <span style="color: var(--color-text-muted);">MOVILIDAD:</span>
+                    <strong class="text-neon" id="stat-movilidad-val">76 PTS</strong>
+                  </div>
+                  <div style="font-family: var(--font-mono); font-size: 0.72rem; display: flex; gap: 14px; justify-content: space-between;">
+                    <span style="color: var(--color-text-muted);">POTENCIA:</span>
+                    <strong class="text-neon" id="stat-potencia-val">89 PTS</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button id="btn-open-calc" class="btn btn-primary btn-block"><i class="fa-solid fa-clipboard-check"></i> REALIZAR TEST DE EVALUACIÓN</button>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- 4. THE POWERZONE METHOD -->
+    <!-- 5. CALCULADORA ATLÉTICA INTEGRAL (BMR, TDEE, MACROS & AGUA) -->
+    <section id="calculadora" class="section-padding">
+      <div class="container">
+        <div class="calc-matrix-card">
+          <div class="section-header text-center">
+            <span class="section-subtitle">MOTOR DE CÁLCULO ENERGÉTICO</span>
+            <h2 class="section-title">CALCULADORA DE <span class="text-neon">CALORÍAS, MACROS & TDEE</span></h2>
+            <p style="font-size: 0.88rem; color: var(--color-text-muted); margin-top: 8px;">
+              Configura tus datos biométricos para calcular con precisión tu tasa metabólica basal y distribución óptima de nutrientes.
+            </p>
+          </div>
+
+          <form id="macro-calc-form">
+            <div class="calc-form-grid">
+              <!-- Sexo & Edad -->
+              <div class="calc-field-group">
+                <label for="calc-sex">Género Biológico</label>
+                <select id="calc-sex" class="calc-select">
+                  <option value="male">Hombre</option>
+                  <option value="female">Mujer</option>
+                </select>
+              </div>
+
+              <div class="calc-field-group">
+                <label for="calc-age">Edad (Años)</label>
+                <input type="number" id="calc-age" class="calc-input" value="26" min="15" max="80">
+              </div>
+
+              <!-- Peso & Altura -->
+              <div class="calc-field-group">
+                <label for="calc-weight">Peso Corporal (kg)</label>
+                <input type="number" id="calc-weight" class="calc-input" value="78" min="40" max="180">
+              </div>
+
+              <div class="calc-field-group">
+                <label for="calc-height">Altura (cm)</label>
+                <input type="number" id="calc-height" class="calc-input" value="178" min="130" max="230">
+              </div>
+
+              <!-- Nivel de Actividad -->
+              <div class="calc-field-group">
+                <label for="calc-activity">Nivel de Actividad Semanal</label>
+                <select id="calc-activity" class="calc-select">
+                  <option value="1.375">Ligero (1-3 días de entrenamiento)</option>
+                  <option value="1.55" selected>Moderado (3-5 días intensos)</option>
+                  <option value="1.725">Muy Activo (6-7 días / Atleta)</option>
+                  <option value="1.9">Extremo (Doble sesión diaria)</option>
+                </select>
+              </div>
+
+              <!-- Objetivo -->
+              <div class="calc-field-group">
+                <label for="calc-target-goal">Objetivo Nutricional</label>
+                <select id="calc-target-goal" class="calc-select">
+                  <option value="surplus">Superávit • Ganar Músculo (+350 kcal)</option>
+                  <option value="deficit" selected>Déficit • Pérdida de Grasa (-400 kcal)</option>
+                  <option value="maintain">Mantenimiento • Rendimiento</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Calculated Live Matrix -->
+            <div class="calc-results-matrix">
+              <div class="result-box">
+                <div class="res-val" id="res-tdee-val">2,480</div>
+                <div class="res-label">CALORÍAS META / DÍA</div>
+              </div>
+
+              <div class="result-box">
+                <div class="res-val text-cyan" id="res-protein-val">172 g</div>
+                <div class="res-label">PROTEÍNA (2.2 g/kg)</div>
+              </div>
+
+              <div class="result-box">
+                <div class="res-val" id="res-carbs-val">260 g</div>
+                <div class="res-label">CARBOHIDRATOS</div>
+              </div>
+
+              <div class="result-box">
+                <div class="res-val text-neon" id="res-water-val">3.2 L</div>
+                <div class="res-label">AGUA DIARIA SUGERIDA</div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. THE POWERZONE METHOD -->
     <section class="section-padding" style="padding-top: 20px;">
       <div class="container">
         <div class="method-banner">
-          <div class="method-header-wrap">
-            <h2 class="section-title" style="font-size: 1.6rem;">THE POWERZONE <span class="text-neon">METHOD</span></h2>
-            <p class="section-subtitle">ENTRENAMIENTO INTELIGENTE. RESULTADOS REALES.</p>
+          <div class="section-header text-center">
+            <span class="section-subtitle">METODOLOGÍA DE RENDIMIENTO</span>
+            <h2 class="section-title">EL MÉTODO <span class="text-neon">POWERZONE</span></h2>
+            <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: 6px;">
+              LOS 4 PILARES INDISPENSABLES PARA UNA TRANSFORMACIÓN FÍSICA Y MENTAL SOSTENIBLE
+            </p>
           </div>
 
           <div class="method-grid">
             <div class="method-item">
               <div class="method-icon-box"><i class="fa-solid fa-dumbbell"></i></div>
-              <div class="method-meta">
-                <div class="method-num-title"><span>01</span> STRENGTH</div>
-                <div class="method-desc">Fuerza e hipertrofia</div>
-              </div>
+              <div class="method-num-title"><span>01</span> FUERZA</div>
+              <div class="method-desc">Fuerza pura y desarrollo de masa magra con sobrecarga progresiva científicamente auditada.</div>
             </div>
 
             <div class="method-item">
               <div class="method-icon-box"><i class="fa-solid fa-fire"></i></div>
-              <div class="method-meta">
-                <div class="method-num-title"><span>02</span> CONDITIONING</div>
-                <div class="method-desc">Resistencia y cardio</div>
-              </div>
+              <div class="method-num-title"><span>02</span> ACONDICIONAMIENTO</div>
+              <div class="method-desc">Entrenamiento metabólico HIIT y Hyrox para optimizar tu capacidad pulmonar y quema calórica.</div>
             </div>
 
             <div class="method-item">
               <div class="method-icon-box"><i class="fa-solid fa-person-walking"></i></div>
-              <div class="method-meta">
-                <div class="method-num-title"><span>03</span> MOBILITY</div>
-                <div class="method-desc">Movimiento y recuperación</div>
-              </div>
+              <div class="method-num-title"><span>03</span> MOVILIDAD</div>
+              <div class="method-desc">Salud articular y prevención de sobrecargas con protocolos de movilidad funcional activa.</div>
             </div>
 
             <div class="method-item">
               <div class="method-icon-box"><i class="fa-solid fa-bolt"></i></div>
-              <div class="method-meta">
-                <div class="method-num-title"><span>04</span> PERFORMANCE</div>
-                <div class="method-desc">Potencia y rendimiento</div>
-              </div>
+              <div class="method-num-title"><span>04</span> POTENCIA</div>
+              <div class="method-desc">Potencia máxima, velocidad de reacción y agilidad neuromuscular en cada sesión.</div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 5. NUESTRAS INSTALACIONES & CONOCE A NUESTROS COACHES -->
-    <section id="entrenadores" class="section-padding">
+    <!-- 7. INSTALACIONES & COACHES DE ÉLITE -->
+    <section id="instalaciones" class="section-padding">
       <div class="container">
         <div class="facilities-coaches-grid">
-          
-          <!-- Left: Nuestras Instalaciones -->
+
+          <!-- Left: Nuestras Instalaciones con Hotspots & Live Occupancy -->
           <div class="facilities-card">
-            <div class="section-header">
-              <h2 class="section-title">NUESTRAS <span class="text-neon">INSTALACIONES</span></h2>
-              <p class="section-subtitle">EQUIPADO PARA TU MEJOR VERSIÓN</p>
-            </div>
-
-            <div class="facilities-view">
-              <img src="assets/images/gym_interior.jpg" alt="Instalaciones del gimnasio">
-              
-              <!-- Hotspots -->
-              <div class="gym-hotspot" style="top: 48%; left: 22%;" data-zone="Zona de Fuerza & Racks">
-                <i class="fa-solid fa-plus"></i>
-                <div class="hotspot-tooltip">Zona de Fuerza & Racks</div>
+            <div>
+              <div class="section-header">
+                <span class="section-subtitle">INFRAESTRUCTURA DE VANGUARDIA</span>
+                <h2 class="section-title">NUESTRAS <span class="text-neon">INSTALACIONES</span></h2>
               </div>
 
-              <div class="gym-hotspot" style="top: 55%; left: 45%;" data-zone="Pista de Césped Funcional">
-                <i class="fa-solid fa-plus"></i>
-                <div class="hotspot-tooltip">Pista Sprint Funcional</div>
+              <!-- Live Occupancy Bar -->
+              <div class="occupancy-gauge-bar">
+                <span><i class="fa-solid fa-signal text-neon"></i> SENSOR DE AFORO EN VIVO:</span>
+                <span class="text-neon">42% OCUPACIÓN • FLUJO ÓPTIMO</span>
               </div>
 
-              <div class="gym-hotspot" style="top: 45%; left: 80%;" data-zone="Área Cardio & Cintas HIIT">
-                <i class="fa-solid fa-plus"></i>
-                <div class="hotspot-tooltip">Área Cardio HIIT</div>
-              </div>
-            </div>
+              <div class="facilities-view">
+                <img src="assets/images/gym_interior.jpg" alt="Instalaciones del gimnasio Powerzone">
 
-            <div class="facilities-cta-wrap">
-              <button class="btn btn-primary btn-sm btn-booking">EXPLORAR GIMNASIO</button>
+                <!-- Hotspots Pulsantes -->
+                <div class="gym-hotspot" style="top: 48%; left: 22%;" data-zone="Zona de Fuerza & Powerlifting Racks">
+                  <i class="fa-solid fa-plus"></i>
+                  <div class="hotspot-tooltip">Zona de Fuerza & Racks Hammer Strength</div>
+                </div>
+
+                <div class="gym-hotspot" style="top: 58%; left: 50%;" data-zone="Pista de Césped Funcional & Hyrox Sled">
+                  <i class="fa-solid fa-plus"></i>
+                  <div class="hotspot-tooltip">Pista Sprint de Césped Funcional</div>
+                </div>
+
+                <div class="gym-hotspot" style="top: 42%; left: 80%;" data-zone="Área de Cintas Curvas HIIT & SkiErg">
+                  <i class="fa-solid fa-plus"></i>
+                  <div class="hotspot-tooltip">Área Cardio HIIT & SkiErg</div>
+                </div>
+              </div>
             </div>
 
             <!-- Facility Zone Badges -->
             <div class="facility-badges">
               <div class="badge-item">
                 <div class="badge-icon"><i class="fa-solid fa-cubes"></i></div>
-                <span class="badge-label">FREE ZONE</span>
+                <span class="badge-label">PESO LIBRE</span>
               </div>
               <div class="badge-item">
                 <div class="badge-icon"><i class="fa-solid fa-heart-pulse"></i></div>
-                <span class="badge-label">CARDIO</span>
+                <span class="badge-label">CARDIO HIIT</span>
               </div>
               <div class="badge-item">
                 <div class="badge-icon"><i class="fa-solid fa-person-running"></i></div>
-                <span class="badge-label">FUNCTIONAL</span>
+                <span class="badge-label">PISTA FUNCIONAL</span>
               </div>
               <div class="badge-item">
                 <div class="badge-icon"><i class="fa-solid fa-spa"></i></div>
-                <span class="badge-label">RECOVERY</span>
+                <span class="badge-label">ZONA RECOVERY</span>
               </div>
             </div>
           </div>
 
-          <!-- Right: Conoce a Nuestros Coaches -->
+          <!-- Right: Coaches de Élite -->
           <div class="coaches-card">
-            <div class="section-header" style="display: flex; justify-content: space-between; align-items: flex-end;">
-              <div>
-                <h2 class="section-title">CONOCE A NUESTROS <span class="text-neon">COACHES</span></h2>
+            <div>
+              <div class="section-header" style="display: flex; justify-content: space-between; align-items: flex-end;">
+                <div>
+                  <span class="section-subtitle">EQUIPO DE COACHES</span>
+                  <h2 class="section-title">CONOCE A NUESTROS <span class="text-neon">COACHES</span></h2>
+                </div>
+                <div style="display: flex; gap: 8px;">
+                  <button id="coach-prev" class="audio-toggle-btn" aria-label="Coach Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+                  <button id="coach-next" class="audio-toggle-btn" aria-label="Coach Siguiente"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
               </div>
-              <div class="coaches-nav-arrows">
-                <button id="coach-prev" class="arrow-btn" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
-                <button id="coach-next" class="arrow-btn" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></button>
+
+              <div class="coaches-carousel-wrapper">
+                <div class="coaches-carousel">
+                  <!-- Coach 1 -->
+                  <div class="coach-item">
+                    <div class="coach-avatar">
+                      <img src="assets/images/coach_marco.jpg" alt="Marco Rivera Coach">
+                    </div>
+                    <div class="coach-name">MARCO RIVERA</div>
+                    <div class="coach-role">COACH PRINCIPAL DE FUERZA</div>
+                    <div class="coach-exp">+8 AÑOS DE EXPERIENCIA • ESPECIALISTA EN HIPERTROFIA Y BIOMECÁNICA</div>
+                    <div class="coach-socials">
+                      <a href="#" class="coach-soc-link" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                      <a href="#" class="coach-soc-link" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                  </div>
+
+                  <!-- Coach 2 -->
+                  <div class="coach-item">
+                    <div class="coach-avatar">
+                      <img src="assets/images/coach_valeria.jpg" alt="Valeria Gómez Coach">
+                    </div>
+                    <div class="coach-name">VALERIA GÓMEZ</div>
+                    <div class="coach-role">COACH DE RENDIMIENTO Y HYROX</div>
+                    <div class="coach-exp">+6 AÑOS DE EXPERIENCIA • ATLETA HYROX ELITE Y POTENCIA METABÓLICA</div>
+                    <div class="coach-socials">
+                      <a href="#" class="coach-soc-link" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                      <a href="#" class="coach-soc-link" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                  </div>
+
+                  <!-- Coach 3 -->
+                  <div class="coach-item">
+                    <div class="coach-avatar">
+                      <img src="assets/images/coach_diego.jpg" alt="Diego Salazar Coach">
+                    </div>
+                    <div class="coach-name">DIEGO SALAZAR</div>
+                    <div class="coach-role">COACH DE ACONDICIONAMIENTO Y RECUPERACIÓN</div>
+                    <div class="coach-exp">+7 AÑOS DE EXPERIENCIA • PREPARADOR FÍSICO DEPORTIVO Y RECOVERY</div>
+                    <div class="coach-socials">
+                      <a href="#" class="coach-soc-link" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                      <a href="#" class="coach-soc-link" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="coaches-carousel-wrapper">
-              <div class="coaches-carousel">
-                <!-- Coach 1 -->
-                <div class="coach-item">
-                  <div class="coach-avatar">
-                    <img src="assets/images/coach_marco.jpg" alt="Marco Rivera Coach">
-                  </div>
-                  <div class="coach-name">MARCO RIVERA</div>
-                  <div class="coach-role">STRENGTH COACH</div>
-                  <div class="coach-exp">+8 AÑOS EXP. / HIPERTROFIA Y FUERZA</div>
-                  <div class="coach-socials">
-                    <a href="#" class="coach-soc-link"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="coach-soc-link"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="coach-soc-link"><i class="fa-brands fa-linkedin-in"></i></a>
-                  </div>
-                </div>
-
-                <!-- Coach 2 -->
-                <div class="coach-item">
-                  <div class="coach-avatar">
-                    <img src="assets/images/coach_valeria.jpg" alt="Valeria Gómez Coach">
-                  </div>
-                  <div class="coach-name">VALERIA GÓMEZ</div>
-                  <div class="coach-role">PERFORMANCE COACH</div>
-                  <div class="coach-exp">+6 AÑOS EXP. / RENDIMIENTO Y POTENCIA</div>
-                  <div class="coach-socials">
-                    <a href="#" class="coach-soc-link"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="coach-soc-link"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="coach-soc-link"><i class="fa-brands fa-linkedin-in"></i></a>
-                  </div>
-                </div>
-
-                <!-- Coach 3 -->
-                <div class="coach-item">
-                  <div class="coach-avatar">
-                    <img src="assets/images/coach_diego.jpg" alt="Diego Salazar Coach">
-                  </div>
-                  <div class="coach-name">DIEGO SALAZAR</div>
-                  <div class="coach-role">CONDITIONING COACH</div>
-                  <div class="coach-exp">+7 AÑOS EXP. / HIIT Y RESISTENCIA</div>
-                  <div class="coach-socials">
-                    <a href="#" class="coach-soc-link"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="coach-soc-link"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="coach-soc-link"><i class="fa-brands fa-linkedin-in"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <button class="btn btn-primary btn-block btn-booking" style="margin-top: 18px;">
+              <i class="fa-solid fa-calendar-check"></i> AGENDAR ASESORÍA CON COACH
+            </button>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- 6. TRANSFORMACIONES, HORARIO DE CLASES & POWERZONE CHALLENGE -->
+    <!-- 8. TRANSFORMACIONES, HORARIO DE CLASES & POWERZONE ARENA -->
     <section id="clases" class="section-padding">
       <div class="container">
         <div class="triple-section-grid">
-          
-          <!-- Column 1: Transformaciones -->
-          <div class="transformation-card">
-            <div class="section-header">
-              <h2 class="section-title" style="font-size: 1.4rem;">TRANSFORMACIONES</h2>
-              <p class="section-subtitle">PROGRESO QUE SE VE.</p>
-            </div>
 
-            <div class="transform-container">
-              <!-- Slider comparison container -->
-              <div class="transform-slider-box" title="Arrastra para comparar el cambio">
-                <img src="assets/images/transformation_athlete.jpg" alt="Transformación Antes y Después">
-                <div class="transform-handle">
+          <!-- Column 1: Transformaciones Reales -->
+          <div class="transformation-card">
+            <div>
+              <div class="section-header">
+                <span class="section-subtitle">RESULTADOS AUDITADOS</span>
+                <h2 class="section-title" style="font-size: 1.4rem;">CASOS DE <span class="text-neon">ÉXITO</span></h2>
+              </div>
+
+              <!-- Interactive Before / After Slider -->
+              <div class="transform-slider-box" id="transform-slider" title="Arrastra el control para ver el antes y después">
+                <div class="transform-img-wrap transform-img-before">
+                  <img src="assets/images/transformation_athlete.jpg" alt="Antes de la transformación">
+                  <span class="transform-label label-before">ANTES</span>
+                </div>
+                <div class="transform-img-wrap transform-img-after" id="transform-after">
+                  <img src="assets/images/transformation_athlete.jpg" alt="Después de la transformación">
+                  <span class="transform-label label-after">DESPUÉS</span>
+                </div>
+                <div class="transform-handle" id="transform-handle">
                   <div class="transform-handle-knob"><i class="fa-solid fa-arrows-left-right"></i></div>
                 </div>
               </div>
@@ -563,173 +781,181 @@
               <!-- Stats Column -->
               <div class="transform-stats-col">
                 <div class="trans-stat-item">
-                  <div class="trans-num">+12 <span style="font-size: 0.75rem;">KG</span></div>
-                  <div class="trans-label">MÚSCULO</div>
+                  <div class="trans-num">+12 KG</div>
+                  <div class="trans-label">Masa Muscular</div>
                 </div>
                 <div class="trans-stat-item">
-                  <div class="trans-num">-8%</div>
-                  <div class="trans-label">GRASA CORPORAL</div>
+                  <div class="trans-num">-8.5%</div>
+                  <div class="trans-label">Grasa Corporal</div>
                 </div>
                 <div class="trans-stat-item">
-                  <div class="trans-num">+32%</div>
-                  <div class="trans-label">FUERZA</div>
+                  <div class="trans-num">+35%</div>
+                  <div class="trans-label">Fuerza 1RM</div>
                 </div>
                 <div class="trans-stat-item">
                   <div class="trans-num">16</div>
-                  <div class="trans-label">SEMANAS</div>
+                  <div class="trans-label">Semanas</div>
                 </div>
               </div>
             </div>
+
+            <button class="btn btn-outline btn-block btn-sm btn-booking" style="margin-top: 18px;">VER HISTORIA COMPLETA</button>
           </div>
 
-          <!-- Column 2: Horario de Clases -->
+          <!-- Column 2: Horario de Clases Semanal -->
           <div class="schedule-card">
-            <div class="section-header">
-              <h2 class="section-title" style="font-size: 1.4rem;">HORARIO DE CLASES</h2>
-              <p class="section-subtitle">ESTA SEMANA</p>
+            <div>
+              <div class="section-header">
+                <span class="section-subtitle">CALENDARIO ACTIVO</span>
+                <h2 class="section-title" style="font-size: 1.4rem;">HORARIO DE <span class="text-neon">CLASES</span></h2>
+              </div>
+
+              <!-- Tabs -->
+              <div class="schedule-tabs">
+                <button class="tab-btn active" data-filter="all">TODAS</button>
+                <button class="tab-btn" data-filter="fuerza">FUERZA</button>
+                <button class="tab-btn" data-filter="hiit">HIIT</button>
+                <button class="tab-btn" data-filter="hyrox">HYROX</button>
+                <button class="tab-btn" data-filter="movilidad">MOVILIDAD</button>
+              </div>
+
+              <!-- Grid -->
+              <div class="schedule-grid-table">
+                <div class="sched-cell header">LUN</div>
+                <div class="sched-cell header">MAR</div>
+                <div class="sched-cell header">MIÉ</div>
+                <div class="sched-cell header">JUE</div>
+                <div class="sched-cell header">VIE</div>
+                <div class="sched-cell header">SÁB</div>
+
+                <!-- Row 1: Morning -->
+                <div class="sched-cell slot-data active-slot" data-type="fuerza">FUERZA</div>
+                <div class="sched-cell slot-data active-slot" data-type="hiit">CARDIO</div>
+                <div class="sched-cell slot-data active-slot" data-type="hyrox">HYROX</div>
+                <div class="sched-cell slot-data active-slot" data-type="fuerza">EMPUJE</div>
+                <div class="sched-cell slot-data active-slot" data-type="hyrox">POTENCIA</div>
+                <div class="sched-cell slot-data active-slot" data-type="hiit">RESISTENCIA</div>
+
+                <!-- Row 2: Midday -->
+                <div class="sched-cell slot-data active-slot" data-type="hiit">HIIT</div>
+                <div class="sched-cell slot-data active-slot" data-type="hyrox">HYROX</div>
+                <div class="sched-cell slot-data active-slot" data-type="hiit">HIIT</div>
+                <div class="sched-cell slot-data active-slot" data-type="movilidad">MOVILIDAD</div>
+                <div class="sched-cell slot-data active-slot" data-type="fuerza">FUERZA</div>
+                <div class="sched-cell slot-data active-slot" data-type="hyrox">CIRCUITO</div>
+
+                <!-- Row 3: Evening -->
+                <div class="sched-cell slot-data active-slot" data-type="hyrox">HYROX</div>
+                <div class="sched-cell slot-data active-slot" data-type="fuerza">FUERZA</div>
+                <div class="sched-cell slot-data active-slot" data-type="hiit">HIIT</div>
+                <div class="sched-cell slot-data active-slot" data-type="fuerza">FUNCIONAL</div>
+                <div class="sched-cell slot-data active-slot" data-type="fuerza">FUERZA</div>
+                <div class="sched-cell slot-data active-slot" data-type="movilidad">MOVILIDAD</div>
+              </div>
             </div>
 
-            <!-- Schedule Filter Tabs -->
-            <div class="schedule-tabs">
-              <button class="tab-btn active" data-filter="all">TODAS</button>
-              <button class="tab-btn" data-filter="fuerza">FUERZA</button>
-              <button class="tab-btn" data-filter="hiit">HIIT</button>
-              <button class="tab-btn" data-filter="movilidad">MOVILIDAD</button>
-              <button class="tab-btn" data-filter="power">POWER</button>
-            </div>
-
-            <!-- Schedule Grid Table -->
-            <div class="schedule-grid-table">
-              <div class="sched-cell header">LUN</div>
-              <div class="sched-cell header">MAR</div>
-              <div class="sched-cell header">MIÉ</div>
-              <div class="sched-cell header">JUE</div>
-              <div class="sched-cell header">VIE</div>
-              <div class="sched-cell header">SÁB</div>
-
-              <!-- Row 1: Morning -->
-              <div class="sched-cell slot-data active-slot" data-type="fuerza">STRENGTH</div>
-              <div class="sched-cell slot-data active-slot" data-type="hiit">CARDIO</div>
-              <div class="sched-cell slot-data active-slot" data-type="power">CROSSFIT</div>
-              <div class="sched-cell slot-data active-slot" data-type="fuerza">PUSH</div>
-              <div class="sched-cell slot-data active-slot" data-type="power">HYROX</div>
-              <div class="sched-cell slot-data active-slot" data-type="hiit">ENDUR</div>
-
-              <!-- Row 2: Midday -->
-              <div class="sched-cell slot-data active-slot" data-type="hiit">HIIT</div>
-              <div class="sched-cell slot-data active-slot" data-type="power">POWER</div>
-              <div class="sched-cell slot-data active-slot" data-type="hiit">HIIT</div>
-              <div class="sched-cell slot-data active-slot" data-type="movilidad">MOBILITY</div>
-              <div class="sched-cell slot-data active-slot" data-type="fuerza">STRENGTH</div>
-              <div class="sched-cell slot-data active-slot" data-type="power">BOXING</div>
-
-              <!-- Row 3: Evening -->
-              <div class="sched-cell slot-data active-slot" data-type="power">POWER</div>
-              <div class="sched-cell slot-data active-slot" data-type="fuerza">STRENGTH</div>
-              <div class="sched-cell slot-data active-slot" data-type="hiit">HIIT</div>
-              <div class="sched-cell slot-data active-slot" data-type="fuerza">FUNCTIONAL</div>
-              <div class="sched-cell slot-data active-slot" data-type="fuerza">STRENGTH</div>
-              <div class="sched-cell slot-data active-slot" data-type="movilidad">MOBILITY</div>
-            </div>
-
-            <button class="btn btn-primary btn-block btn-sm btn-booking" style="margin-top: auto;">RESERVAR CLASE</button>
+            <button class="btn btn-primary btn-block btn-sm btn-booking" style="margin-top: 18px;">
+              <i class="fa-solid fa-ticket"></i> RESERVAR MI CUPO
+            </button>
           </div>
 
-          <!-- Column 3: Powerzone Challenge -->
+          <!-- Column 3: Powerzone Arena Leaderboard -->
           <div class="challenge-card">
-            <div class="section-header">
-              <h2 class="section-title" style="font-size: 1.4rem;">POWERZONE <span class="text-neon">CHALLENGE</span></h2>
-              <p class="section-subtitle">ÚNETE AL RETO.</p>
+            <div>
+              <div class="section-header">
+                <span class="section-subtitle">ARENA DE RETOS</span>
+                <h2 class="section-title" style="font-size: 1.4rem;">POWERZONE <span class="text-neon">ARENA</span></h2>
+              </div>
+
+              <div class="leaderboard-list">
+                <div class="leaderboard-item">
+                  <div class="user-info">
+                    <div class="user-rank-icon" style="background: rgba(204,255,0,0.2);"><i class="fa-solid fa-crown text-neon"></i></div>
+                    <span class="user-name">ANDREA M.</span>
+                  </div>
+                  <span class="user-score">48 SESIONES • 1,240 XP</span>
+                </div>
+
+                <div class="leaderboard-item">
+                  <div class="user-info">
+                    <div class="user-rank-icon">2</div>
+                    <span class="user-name">DANIEL K.</span>
+                  </div>
+                  <span class="user-score">45 SESIONES • 1,180 XP</span>
+                </div>
+
+                <div class="leaderboard-item">
+                  <div class="user-info">
+                    <div class="user-rank-icon">3</div>
+                    <span class="user-name">MARÍA P.</span>
+                  </div>
+                  <span class="user-score">43 SESIONES • 1,090 XP</span>
+                </div>
+
+                <div class="leaderboard-item">
+                  <div class="user-info">
+                    <div class="user-rank-icon">4</div>
+                    <span class="user-name">JUAN C.</span>
+                  </div>
+                  <span class="user-score">41 SESIONES • 990 XP</span>
+                </div>
+              </div>
             </div>
 
-            <div class="leaderboard-list">
-              <div class="leaderboard-item">
-                <div class="user-info">
-                  <div class="user-rank-icon"><i class="fa-solid fa-crown"></i></div>
-                  <span class="user-name">ANDREA</span>
-                </div>
-                <span class="user-score">48 WORKOUTS</span>
-              </div>
-
-              <div class="leaderboard-item">
-                <div class="user-info">
-                  <div class="user-rank-icon">2</div>
-                  <span class="user-name">DANIEL</span>
-                </div>
-                <span class="user-score">45 WORKOUTS</span>
-              </div>
-
-              <div class="leaderboard-item">
-                <div class="user-info">
-                  <div class="user-rank-icon">3</div>
-                  <span class="user-name">MARÍA</span>
-                </div>
-                <span class="user-score">43 WORKOUTS</span>
-              </div>
-
-              <div class="leaderboard-item">
-                <div class="user-info">
-                  <div class="user-rank-icon">4</div>
-                  <span class="user-name">JUAN</span>
-                </div>
-                <span class="user-score">41 WORKOUTS</span>
-              </div>
-            </div>
-
-            <button class="btn btn-primary btn-block btn-sm btn-booking" style="margin-top: auto;">VER TODOS LOS RETOS</button>
+            <button class="btn btn-primary btn-block btn-sm btn-booking" style="margin-top: 18px;">
+              <i class="fa-solid fa-trophy"></i> UNIRME AL RETO SEMANAL
+            </button>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- 7. TU GIMNASIO EN TU BOLSILLO & SOMOS COMUNIDAD -->
+    <!-- 9. APP EN TU BOLSILLO & COMUNIDAD -->
     <section class="section-padding">
       <div class="container">
         <div class="app-community-grid">
-          
+
           <!-- Left: Mobile App Feature -->
           <div class="app-feature-card">
             <div>
+              <span class="section-subtitle">TECNOLOGÍA MÓVIL EN TIEMPO REAL</span>
               <h2 class="section-title">TU GIMNASIO <br><span class="text-neon">EN TU BOLSILLO.</span></h2>
-              <p style="font-size: 0.8rem; color: var(--color-text-muted); margin-top: 8px;">
-                Entrena, registra tu progreso, reserva clases y mucho más en tiempo real.
+              <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: 10px; line-height: 1.6;">
+                Registra tus series, pesos y descansos en tiempo real. Sincroniza tus métricas biométricas con Apple Watch y Garmin.
               </p>
 
-              <!-- App Store Badges -->
               <div class="app-store-badges">
-                <a href="#appstore" class="store-badge-btn">
-                  <i class="fa-brands fa-apple" style="font-size: 1.1rem;"></i>
+                <a href="#appstore" class="store-badge-btn" title="Descargar en App Store">
+                  <i class="fa-brands fa-apple" style="font-size: 1.25rem;"></i>
                   <span>App Store</span>
                 </a>
-                <a href="#googleplay" class="store-badge-btn">
-                  <i class="fa-brands fa-google-play" style="font-size: 0.95rem;"></i>
+                <a href="#googleplay" class="store-badge-btn" title="Descargar en Google Play">
+                  <i class="fa-brands fa-google-play" style="font-size: 1.1rem;"></i>
                   <span>Google Play</span>
                 </a>
               </div>
             </div>
 
-            <!-- Smartphone Mockup -->
             <div class="app-mockup-wrapper">
-              <img src="assets/images/app_mockup.jpg" alt="Powerzone App Mockup">
+              <img src="assets/images/app_mockup.jpg" alt="Powerzone App Mockup en Smartphone">
             </div>
           </div>
 
-          <!-- Right: Comunidad -->
+          <!-- Right: Comunidad Powerzone -->
           <div class="community-card">
-            <div class="section-header">
+            <div>
+              <span class="section-subtitle">TRIBU DE ALTO RENDIMIENTO</span>
               <h2 class="section-title">MÁS QUE UN GIMNASIO, <br>SOMOS <span class="text-neon">COMUNIDAD.</span></h2>
             </div>
 
             <div class="community-banner-box">
               <img src="assets/images/community_bg.jpg" alt="Comunidad Powerzone entrenando juntos">
-              <!-- Realtime overlay ECG wave -->
               <div class="community-ecg-overlay">
-                <canvas id="community-ecg-canvas" style="width: 100%; height: 100%;"></canvas>
+                <canvas id="community-ecg-canvas"></canvas>
               </div>
             </div>
 
-            <!-- Stats Metrics -->
             <div class="community-stats-row">
               <div class="com-stat-item">
                 <div class="com-num">2.4K+</div>
@@ -740,12 +966,12 @@
                 <div class="com-label">CLASES / MES</div>
               </div>
               <div class="com-stat-item">
-                <div class="com-num">20+</div>
-                <div class="com-label">EVENTOS / AÑO</div>
+                <div class="com-num">24/7</div>
+                <div class="com-label">ACCESO PRO</div>
               </div>
               <div class="com-stat-item">
-                <div class="com-num">01</div>
-                <div class="com-label">COMUNIDAD</div>
+                <div class="com-num">100%</div>
+                <div class="com-label">PASIÓN</div>
               </div>
             </div>
           </div>
@@ -754,57 +980,130 @@
       </div>
     </section>
 
-    <!-- 8. TESTIMONIOS, ELIGE TU PLAN & PREGUNTAS FRECUENTES -->
+    <!-- 10. TESTIMONIOS (CARRUSEL DINÁMICO), MATRIZ DE PLANES & PREGUNTAS FRECUENTES -->
     <section id="planes" class="section-padding">
       <div class="container">
         <div class="reviews-plans-faq-grid">
-          
-          <!-- Column 1: Testimonials -->
-          <div class="testimonial-card">
-            <div>
-              <div class="section-header">
-                <h2 class="section-title" style="font-size: 1.3rem;">LO QUE DICEN <br><span class="text-neon">NUESTROS MIEMBROS</span></h2>
+
+          <!-- Column 1: Testimonials Carousel with Multiple Athletes -->
+          <div class="cyber-card testimonials-carousel-card">
+            <div class="testimonials-header">
+              <div>
+                <span class="section-subtitle">EXPERIENCIAS REALES</span>
+                <h3 class="section-title" style="font-size: 1.3rem;">LO QUE DICEN <br><span class="text-neon">NUESTROS ATLETAS</span></h3>
               </div>
-              
-              <div class="quote-icon-neon">“</div>
-              <p class="testimonial-quote-text">
-                Powerzone cambió mi disciplina, mi cuerpo y mi mentalidad. No es solo un gimnasio, es un estilo de vida de constante superación.
-              </p>
+              <div class="testimonials-arrows">
+                <button id="test-prev-btn" class="audio-toggle-btn" aria-label="Testimonio Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+                <button id="test-next-btn" class="audio-toggle-btn" aria-label="Testimonio Siguiente"><i class="fa-solid fa-chevron-right"></i></button>
+              </div>
             </div>
 
-            <div class="testimonial-author-box">
-              <div class="test-avatar">
-                <img src="assets/images/testimonial_camila.jpg" alt="Camila R.">
+            <!-- Slides Track -->
+            <div class="testimonials-track-wrap">
+              <div class="testimonials-track">
+                <!-- Slide 1: Camila R. -->
+                <div class="testimonial-slide active">
+                  <div class="test-stars">
+                    <i class="fa-solid fa-star text-neon"></i>
+                    <i class="fa-solid fa-star text-neon"></i>
+                    <i class="fa-solid fa-star text-neon"></i>
+                    <i class="fa-solid fa-star text-neon"></i>
+                    <i class="fa-solid fa-star text-neon"></i>
+                  </div>
+                  <p class="test-quote">
+                    "Powerzone cambió mi disciplina, mi físico y mi energía diaria. El nivel de equipamiento y los coaches no tienen comparación. Pasé de 54kg a 61kg con masa magra y fuerza récord."
+                  </p>
+                  <div class="test-author-row">
+                    <img src="assets/images/testimonial_camila.jpg" alt="Camila R." class="test-avatar-img">
+                    <div>
+                      <div class="test-author-name">CAMILA R.</div>
+                      <div class="test-author-badge">MIEMBRO • 9 MESES (+7 KG MÚSCULO)</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 2: Rodrigo M. -->
+                <div class="testimonial-slide">
+                  <div class="test-stars">
+                    <i class="fa-solid fa-star text-neon"></i>
+                    <i class="fa-solid fa-star text-neon"></i>
+                    <i class="fa-solid fa-star text-neon"></i>
+                    <i class="fa-solid fa-star text-neon"></i>
+                    <i class="fa-solid fa-star text-neon"></i>
+                  </div>
+                  <p class="test-quote">
+                    "El monitoreo biométrico y la pista de trineos Hyrox me permitieron clasificar al campeonato nacional. No existe en la ciudad otro gimnasio con este nivel de datos y profesionalismo."
+                  </p>
+                  <div class="test-author-row">
+                    <img src="assets/images/testimonial_rodrigo.jpg" alt="Rodrigo M." class="test-avatar-img">
+                    <div>
+                      <div class="test-author-name">RODRIGO M.</div>
+                      <div class="test-author-badge">COMPETIDOR HYROX • 1.5 AÑOS</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 3: Sofía V. -->
+                <div class="testimonial-slide">
+                  <div class="test-stars">
+                    <i class="fa-solid fa-star text-neon"></i>
+                    <i class="fa-solid fa-star text-neon"></i>
+                    <i class="fa-solid fa-star text-neon"></i>
+                    <i class="fa-solid fa-star text-neon"></i>
+                    <i class="fa-solid fa-star text-neon"></i>
+                  </div>
+                  <p class="test-quote">
+                    "Perdí 11kg de grasa sin dietas restrictivas ni pasar hambre, solo siguiendo la programación de macros de la app y las clases de HIIT. La comunidad te motiva a nunca rendirte."
+                  </p>
+                  <div class="test-author-row">
+                    <img src="assets/images/testimonial_sofia.jpg" alt="Sofía V." class="test-avatar-img">
+                    <div>
+                      <div class="test-author-name">SOFÍA V.</div>
+                      <div class="test-author-badge">MIEMBRO • 6 MESES (-11 KG GRASA)</div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div>
-                <div class="test-name">CAMILA R.</div>
-                <div class="test-meta">MIEMBRO / 9 MESES</div>
-              </div>
+            </div>
+
+            <!-- Dots Indicator -->
+            <div class="testimonials-dots" id="testimonials-dots">
+              <span class="dot active" data-index="0"></span>
+              <span class="dot" data-index="1"></span>
+              <span class="dot" data-index="2"></span>
             </div>
           </div>
 
-          <!-- Column 2: Pricing Plans -->
+          <!-- Column 2: Pricing Matrix with Billing Switch -->
           <div class="pricing-section-card">
-            <div class="section-header">
-              <h2 class="section-title" style="font-size: 1.4rem;">ELIGE <span class="text-neon">TU PLAN</span></h2>
-              <p class="section-subtitle">TU MEJOR VERSIÓN TE ESTÁ ESPERANDO.</p>
+            <div class="section-header text-center">
+              <span class="section-subtitle">MEMBRESÍAS DISPONIBLES</span>
+              <h2 class="section-title" style="font-size: 1.6rem;">ELIGE <span class="text-neon">TU PLAN</span></h2>
+
+              <!-- Billing Toggle -->
+              <div class="pricing-billing-switch">
+                <span class="billing-label active" id="billing-monthly-label">MENSUAL</span>
+                <div class="switch-toggle-pill" id="billing-toggle-switch"></div>
+                <span class="billing-label" id="billing-annual-label">ANUAL <strong class="text-neon">(-25% DE DESCUENTO)</strong></span>
+              </div>
             </div>
 
             <div class="pricing-plans-row">
               <!-- Plan 1: Basic -->
               <div class="plan-card">
                 <div>
-                  <div class="plan-tag">BASIC</div>
-                  <div class="plan-subtag">START</div>
+                  <div class="plan-tag">BÁSICO</div>
+                  <div class="plan-subtag">ACCESO ESTÁNDAR</div>
                   <div class="plan-price-wrap">
-                    <span class="plan-price-num">$29</span>
+                    <span class="plan-price-num" id="price-basic">$29</span>
                     <span class="plan-price-period">/MES</span>
                   </div>
 
                   <ul class="plan-features-list">
-                    <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Acceso al gimnasio</li>
-                    <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Clases grupales</li>
-                    <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Evaluación inicial</li>
+                    <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Acceso libre al gimnasio</li>
+                    <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Clases grupales estándar</li>
+                    <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Evaluación inicial de fuerza</li>
+                    <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Lockers & Duchas premium</li>
                   </ul>
                 </div>
 
@@ -815,38 +1114,38 @@
               <div class="plan-card featured">
                 <div>
                   <div class="plan-tag">PREMIUM</div>
-                  <div class="plan-subtag">PERFORM</div>
+                  <div class="plan-subtag">ATLETA PRO</div>
                   <div class="plan-price-wrap">
-                    <span class="plan-price-num">$49</span>
+                    <span class="plan-price-num text-neon" id="price-premium">$49</span>
                     <span class="plan-price-period">/MES</span>
                   </div>
 
                   <ul class="plan-features-list">
-                    <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Todo de Basic</li>
-                    <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Rutinas personalizadas</li>
-                    <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Seguimiento semanal</li>
-                    <li class="plan-feature-item"><i class="fa-solid fa-check"></i> App personalizada</li>
+                    <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Todo lo incluido en Básico</li>
+                    <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Rutinas personalizadas en App</li>
+                    <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Acceso a zona Hyrox & HIIT</li>
+                    <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Bio-Tracking en tiempo real</li>
                   </ul>
                 </div>
 
                 <button class="btn btn-primary btn-block btn-select-plan">ELEGIR PLAN</button>
               </div>
 
-              <!-- Plan 3: Pro -->
+              <!-- Plan 3: Pro Elite -->
               <div class="plan-card">
                 <div>
                   <div class="plan-tag">PRO</div>
-                  <div class="plan-subtag">ELITE</div>
+                  <div class="plan-subtag">VIP ÉLITE 1 A 1</div>
                   <div class="plan-price-wrap">
-                    <span class="plan-price-num">$79</span>
+                    <span class="plan-price-num" id="price-pro">$79</span>
                     <span class="plan-price-period">/MES</span>
                   </div>
 
                   <ul class="plan-features-list">
-                    <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Todo de Premium</li>
-                    <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Nutrición personalizada</li>
-                    <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Suplementación 1 a 1</li>
-                    <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Acceso total 24/7</li>
+                    <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Todo lo incluido en Premium</li>
+                    <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Coaching 1 a 1 semanal</li>
+                    <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Plan nutricional personalizado</li>
+                    <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Acceso prioritario 24/7</li>
                   </ul>
                 </div>
 
@@ -855,69 +1154,63 @@
             </div>
           </div>
 
-          <!-- Column 3: FAQ Accordion -->
+          <!-- Column 3: FAQ Accordion with Search -->
           <div class="faq-section-card">
-            <div class="section-header">
-              <h2 class="section-title" style="font-size: 1.3rem;">¿TIENES <span class="text-neon">DUDAS?</span></h2>
-            </div>
-
-            <div class="faq-accordion">
-              <div class="faq-item active">
-                <div class="faq-header">
-                  <span class="faq-question">¿Necesito experiencia previa?</span>
-                  <i class="fa-solid fa-plus faq-icon"></i>
-                </div>
-                <div class="faq-body" style="max-height: 120px;">
-                  <div class="faq-body-content">
-                    No. Nuestros coaches adaptan cada ejercicio a tu nivel y condición actual desde el primer día.
-                  </div>
-                </div>
+            <div>
+              <div class="section-header">
+                <span class="section-subtitle">RESOLUCIÓN DE DUDAS</span>
+                <h3 class="section-title" style="font-size: 1.3rem;">PREGUNTAS <span class="text-neon">FRECUENTES</span></h3>
               </div>
 
-              <div class="faq-item">
-                <div class="faq-header">
-                  <span class="faq-question">¿Puedo cancelar mi membresía?</span>
-                  <i class="fa-solid fa-plus faq-icon"></i>
-                </div>
-                <div class="faq-body">
-                  <div class="faq-body-content">
-                    Sí, no tenemos plazos forzosos ni penalizaciones. Puedes pausar o cancelar cuando desees desde tu app.
+              <!-- FAQ Search Filter -->
+              <input type="text" id="faq-search" class="faq-search-input" placeholder="🔍 Buscar duda (ej. cancelar, coaches)...">
+
+              <div class="faq-accordion">
+                <div class="faq-item active">
+                  <div class="faq-header">
+                    <span class="faq-question">¿Necesito experiencia previa?</span>
+                    <i class="fa-solid fa-plus faq-icon"></i>
+                  </div>
+                  <div class="faq-body" style="max-height: 140px;">
+                    <div class="faq-body-content">
+                      No. Nuestros coaches adaptan cada sesión a tu nivel actual y te guían paso a paso desde el primer día.
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="faq-item">
-                <div class="faq-header">
-                  <span class="faq-question">¿Incluyen entrenadores personales?</span>
-                  <i class="fa-solid fa-plus faq-icon"></i>
-                </div>
-                <div class="faq-body">
-                  <div class="faq-body-content">
-                    El plan Pro Elite incluye coaching 1 a 1 personalizado. En los demás planes cuentas con asesoría permanente en sala.
+                <div class="faq-item">
+                  <div class="faq-header">
+                    <span class="faq-question">¿Puedo cancelar mi plan cuando quiera?</span>
+                    <i class="fa-solid fa-plus faq-icon"></i>
+                  </div>
+                  <div class="faq-body">
+                    <div class="faq-body-content">
+                      Sí, no tenemos plazos forzosos ni penalizaciones. Puedes pausar o cancelar tu suscripción desde la app.
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="faq-item">
-                <div class="faq-header">
-                  <span class="faq-question">¿Qué incluye el plan Premium?</span>
-                  <i class="fa-solid fa-plus faq-icon"></i>
-                </div>
-                <div class="faq-body">
-                  <div class="faq-body-content">
-                    Acceso ilimitado, todas las clases grupales, plan de entrenamiento individualizado y métricas avanzadas en la app.
+                <div class="faq-item">
+                  <div class="faq-header">
+                    <span class="faq-question">¿Hay pase de prueba gratis?</span>
+                    <i class="fa-solid fa-plus faq-icon"></i>
+                  </div>
+                  <div class="faq-body">
+                    <div class="faq-body-content">
+                      ¡Por supuesto! Tienes un pase de prueba de 1 día completamente gratuito para entrenar y conocer las instalaciones.
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="faq-item">
-                <div class="faq-header">
-                  <span class="faq-question">¿Puedo probar el gimnasio?</span>
-                  <i class="fa-solid fa-plus faq-icon"></i>
-                </div>
-                <div class="faq-body">
-                  <div class="faq-body-content">
-                    ¡Por supuesto! Solicita un pase de prueba de 1 día completamente gratis para conocer nuestras instalaciones.
+                <div class="faq-item">
+                  <div class="faq-header">
+                    <span class="faq-question">¿Qué incluye la app Powerzone?</span>
+                    <i class="fa-solid fa-plus faq-icon"></i>
+                  </div>
+                  <div class="faq-body">
+                    <div class="faq-body-content">
+                      Acceso biométrico, registro de cargas por ejercicio, cálculo calórico y reserva de clases con 1 clic.
+                    </div>
                   </div>
                 </div>
               </div>
@@ -928,36 +1221,36 @@
       </div>
     </section>
 
-    <!-- 9. PRE-FOOTER CTA BANNER -->
+    <!-- 11. PRE-FOOTER BANNER -->
     <section class="container">
       <div class="prefooter-cta-section">
         <div class="prefooter-cta-bg">
-          <img src="assets/images/cta_runner.jpg" alt="Atleta listo en los bloques de salida">
+          <img src="assets/images/cta_runner.jpg" alt="Atleta listo en la pista de salida">
         </div>
         <div class="prefooter-cta-content">
           <div>
-            <h2 class="prefooter-title">TU PRÓXIMA <br><span class="text-neon">VERSIÓN COMIENZA AQUÍ.</span></h2>
-            <p class="prefooter-sub">NO ESPERES MÁS, EMPIEZA HOY.</p>
+            <span class="prefooter-sub">NO LO PIENSES MÁS • TU CAMBIO INICIA HOY</span>
+            <h2 class="prefooter-title">TU PRÓXIMA VERSIÓN <br><span class="text-neon">ESTÁ ESPERÁNDOTE.</span></h2>
           </div>
 
-          <a href="#planes" class="btn btn-primary" style="padding: 16px 36px; font-size: 0.95rem;">COMIENZA AHORA</a>
+          <a href="#planes" class="btn btn-primary" style="padding: 16px 36px; font-size: 1rem;"><i class="fa-solid fa-bolt"></i> COMIENZA AHORA</a>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- 10. SITE FOOTER -->
+  <!-- 12. SITE FOOTER -->
   <footer id="contacto" class="site-footer">
     <div class="container">
       <div class="footer-grid">
-        
+
         <!-- Brand & Slogan -->
         <div class="footer-brand-col">
           <a href="#" class="brand-logo">
             <i class="fa-solid fa-bolt bolt"></i>
             <span>POWERZONE</span>
           </a>
-          <div class="footer-slogan">TRAIN. RECOVER. PERFORM.</div>
+          <div class="footer-slogan">ENTRENA. RECUPÉRATE. RINDE AL MÁXIMO. • CENTRO DE ALTO RENDIMIENTO</div>
           <div class="footer-social-links">
             <a href="#instagram" class="footer-soc-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
             <a href="#facebook" class="footer-soc-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
@@ -970,10 +1263,10 @@
         <div>
           <div class="footer-col-title">ENTRENA</div>
           <ul class="footer-links-list">
-            <li><a href="#clases">Clases</a></li>
-            <li><a href="#entrenamiento-personal">Entrenamiento Personal</a></li>
-            <li><a href="#programas">Programas</a></li>
-            <li><a href="#horarios">Horarios</a></li>
+            <li><a href="#clases">Clases Grupales</a></li>
+            <li><a href="#rutinas">Entrenamiento Personal</a></li>
+            <li><a href="#objetivos">Programas</a></li>
+            <li><a href="#clases">Horarios</a></li>
           </ul>
         </div>
 
@@ -981,10 +1274,10 @@
         <div>
           <div class="footer-col-title">COMPAÑÍA</div>
           <ul class="footer-links-list">
-            <li><a href="#nosotros">Sobre Nosotros</a></li>
-            <li><a href="#entrenadores">Entrenadores</a></li>
-            <li><a href="#carreras">Carreras</a></li>
-            <li><a href="#prensa">Prensa</a></li>
+            <li><a href="#instalaciones">Instalaciones</a></li>
+            <li><a href="#instalaciones">Coaches</a></li>
+            <li><a href="#planes">Membresías</a></li>
+            <li><a href="#prensa">Prensa & Eventos</a></li>
           </ul>
         </div>
 
@@ -992,10 +1285,10 @@
         <div>
           <div class="footer-col-title">COMUNIDAD</div>
           <ul class="footer-links-list">
-            <li><a href="#retos">Retos</a></li>
-            <li><a href="#eventos">Eventos</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#instagram">Instagram</a></li>
+            <li><a href="#clases">Powerzone Arena</a></li>
+            <li><a href="#comunidad">Eventos Hyrox</a></li>
+            <li><a href="#blog">Blog & Nutrición</a></li>
+            <li><a href="#instagram">Instagram VIP</a></li>
           </ul>
         </div>
 
@@ -1003,19 +1296,23 @@
         <div>
           <div class="footer-col-title">SOPORTE</div>
           <ul class="footer-links-list">
-            <li><a href="#contacto">Contacto</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#ubicacion">Ubicación</a></li>
-            <li><a href="#terminos">Términos y Condiciones</a></li>
+            <li><a href="#contacto">Contacto Directo</a></li>
+            <li><a href="https://wa.me/573133340054?text=Hola%20Powerzone%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener noreferrer">WhatsApp Directo</a></li>
+            <li><a href="#planes">FAQ</a></li>
+            <li><a href="#ubicacion">Ubicación y Sede</a></li>
+            <li><a href="#terminos">Términos y Privacidad</a></li>
           </ul>
         </div>
 
-        <!-- Col 5: Únete Newsletter -->
+        <!-- Col 5: Newsletter -->
         <div>
           <div class="footer-col-title">ÚNETE A POWERZONE</div>
-          <p style="font-size: 0.72rem; color: var(--color-text-muted);">Recibe tips, promociones y novedades.</p>
-          <form id="newsletter-form" class="newsletter-form">
-            <input type="email" class="newsletter-input" placeholder="Tu correo electrónico" required>
+          <p style="font-size: 0.76rem; color: var(--color-text-muted);">Recibe rutinas exclusivas, tips de nutrición y pases VIP.</p>
+          <form id="newsletter-form" class="newsletter-form" action="https://formsubmit.co/andresgarcia2964@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="Nuevo suscriptor Powerzone ⚡">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="email" name="email" class="newsletter-input" placeholder="Tu correo electrónico" required>
             <button type="submit" class="newsletter-btn" aria-label="Suscribirse"><i class="fa-solid fa-arrow-right"></i></button>
           </form>
         </div>
@@ -1023,52 +1320,159 @@
       </div>
 
       <div class="footer-bottom-bar">
-        <div>© 2026 Powerzone. Todos los derechos reservados.</div>
+        <div>© 2026 Powerzone Performance Inc. Todos los derechos reservados. Diseñado para atletas sin límites.</div>
       </div>
     </div>
   </footer>
 
-  <!-- MODAL: CALCULADORA POWERZONE SCORE -->
+  <!-- MODAL 1: TEST DE EVALUACIÓN Y DIAGNÓSTICO POWERZONE SCORE -->
   <div id="score-calc-modal" class="modal-backdrop">
-    <div class="modal-dialog">
+    <div class="modal-dialog diagnostic-modal-dialog">
       <button id="btn-close-calc" class="modal-close-btn" aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button>
-      <h3 style="font-family: var(--font-heading); font-size: 1.4rem; font-weight: 900; color: #fff; margin-bottom: 8px;">
-        CALCULA TU <span class="text-neon">POWERZONE SCORE</span>
-      </h3>
-      <p style="font-size: 0.75rem; color: var(--color-text-muted); margin-bottom: 20px;">
-        Ajusta tus niveles actuales para estimar tu índice general de rendimiento atlético.
+      
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 6px;">
+        <i class="fa-solid fa-clipboard-check text-neon" style="font-size: 1.3rem;"></i>
+        <h3 style="font-family: var(--font-heading); font-size: 1.35rem; font-weight: 900; color: #fff;">
+          TEST DE <span class="text-neon">EVALUACIÓN ATLÉTICA</span>
+        </h3>
+      </div>
+      
+      <p style="font-size: 0.78rem; color: var(--color-text-muted); margin-bottom: 20px; line-height: 1.5;">
+        Responde este test rápido para diagnosticar con rigor tu capacidad física real en 4 pilares biomecánicos y obtener tu <strong>Powerzone Score verificado</strong>.
       </p>
 
-      <div class="modal-slider-row">
-        <div class="modal-slider-label"><span>Fuerza</span><span id="val-fuerza">92</span></div>
-        <input type="range" id="calc-fuerza" class="modal-range-input" min="40" max="100" value="92">
-      </div>
+      <form id="diagnostic-test-form">
+        <!-- Pregunta 1: Experiencia -->
+        <div class="diag-question-group">
+          <label class="diag-question-label">1. ¿Cuál es tu experiencia entrenando fuerza / gym?</label>
+          <div class="diag-options-grid">
+            <label class="diag-option-pill">
+              <input type="radio" name="diag-exp" value="65">
+              <span>Principiante (&lt; 1 año)</span>
+            </label>
+            <label class="diag-option-pill">
+              <input type="radio" name="diag-exp" value="85" checked>
+              <span>Intermedio (1 a 3 años)</span>
+            </label>
+            <label class="diag-option-pill">
+              <input type="radio" name="diag-exp" value="95">
+              <span>Avanzado (+3 años continuos)</span>
+            </label>
+          </div>
+        </div>
 
-      <div class="modal-slider-row">
-        <div class="modal-slider-label"><span>Resistencia</span><span id="val-resistencia">81</span></div>
-        <input type="range" id="calc-resistencia" class="modal-range-input" min="40" max="100" value="81">
-      </div>
+        <!-- Pregunta 2: Fuerza relativa -->
+        <div class="diag-question-group">
+          <label class="diag-question-label">2. ¿Cuántas flexiones / dominadas estrictas puedes hacer?</label>
+          <div class="diag-options-grid">
+            <label class="diag-option-pill">
+              <input type="radio" name="diag-fuerza" value="60">
+              <span>Menos de 6 reps</span>
+            </label>
+            <label class="diag-option-pill">
+              <input type="radio" name="diag-fuerza" value="88" checked>
+              <span>6 a 15 reps con buen control</span>
+            </label>
+            <label class="diag-option-pill">
+              <input type="radio" name="diag-fuerza" value="96">
+              <span>Más de 16 reps / Lastrado</span>
+            </label>
+          </div>
+        </div>
 
-      <div class="modal-slider-row">
-        <div class="modal-slider-label"><span>Movilidad</span><span id="val-movilidad">76</span></div>
-        <input type="range" id="calc-movilidad" class="modal-range-input" min="40" max="100" value="76">
-      </div>
+        <!-- Pregunta 3: Resistencia cardiovascular -->
+        <div class="diag-question-group">
+          <label class="diag-question-label">3. ¿Cuánto tiempo toleras carrera o remo a alta intensidad?</label>
+          <div class="diag-options-grid">
+            <label class="diag-option-pill">
+              <input type="radio" name="diag-cardio" value="65">
+              <span>Menos de 10 minutos</span>
+            </label>
+            <label class="diag-option-pill">
+              <input type="radio" name="diag-cardio" value="82" checked>
+              <span>10 a 25 min sostenidos</span>
+            </label>
+            <label class="diag-option-pill">
+              <input type="radio" name="diag-cardio" value="95">
+              <span>+30 min a ritmo de carrera</span>
+            </label>
+          </div>
+        </div>
 
-      <div class="modal-slider-row">
-        <div class="modal-slider-label"><span>Potencia</span><span id="val-potencia">89</span></div>
-        <input type="range" id="calc-potencia" class="modal-range-input" min="40" max="100" value="89">
-      </div>
+        <!-- Pregunta 4: Movilidad & Recuperación -->
+        <div class="diag-question-group">
+          <label class="diag-question-label">4. ¿Cómo es tu movilidad articular y descanso diario?</label>
+          <div class="diag-options-grid">
+            <label class="diag-option-pill">
+              <input type="radio" name="diag-mov" value="68">
+              <span>Rígido / Duermo &lt; 6 hrs</span>
+            </label>
+            <label class="diag-option-pill">
+              <input type="radio" name="diag-mov" value="84" checked>
+              <span>Rango normal / 7-8 hrs sueño</span>
+            </label>
+            <label class="diag-option-pill">
+              <input type="radio" name="diag-mov" value="94">
+              <span>Excelente movilidad & recovery</span>
+            </label>
+          </div>
+        </div>
 
-      <div class="modal-slider-row">
-        <div class="modal-slider-label"><span>Recuperación</span><span id="val-recuperacion">84</span></div>
-        <input type="range" id="calc-recuperacion" class="modal-range-input" min="40" max="100" value="84">
-      </div>
+        <!-- Live Diagnostic Summary Banner inside Modal -->
+        <div class="diag-summary-banner">
+          <div>
+            <div style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--color-text-muted);">SCORE CALCULADO:</div>
+            <div style="font-family: var(--font-heading); font-size: 1.8rem; font-weight: 900; color: var(--neon-lime);" id="diag-preview-score">87 PTS</div>
+          </div>
+          <div style="text-align: right;">
+            <div style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--neon-cyan);">DIAGNÓSTICO:</div>
+            <div style="font-size: 0.78rem; font-weight: 800; color: #fff;" id="diag-preview-status">Nivel Intermedio-Alto • Potencial Pro</div>
+          </div>
+        </div>
 
-      <button id="btn-apply-calc" class="btn btn-primary btn-block" style="margin-top: 18px;">APLICAR Y ACTUALIZAR SCORE</button>
+        <button type="button" id="btn-apply-calc" class="btn btn-primary btn-block" style="margin-top: 16px;">
+          <i class="fa-solid fa-check"></i> GUARDAR EVALUACIÓN Y ACTUALIZAR
+        </button>
+      </form>
     </div>
   </div>
 
+  <!-- MODAL 2: TICKET DIGITAL DE RESERVA -->
+  <div id="booking-modal" class="modal-backdrop">
+    <div class="modal-dialog">
+      <button id="btn-close-booking" class="modal-close-btn" aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button>
+      <h3 style="font-family: var(--font-heading); font-size: 1.4rem; font-weight: 900; color: #fff; margin-bottom: 4px;">
+        PASE DIGITAL <span class="text-neon">CONFIRMADO</span>
+      </h3>
+      <p style="font-size: 0.78rem; color: var(--color-text-muted);">
+        Presenta este ticket en recepción o mediante tu App Powerzone.
+      </p>
+
+      <div class="digital-ticket-box">
+        <div class="ticket-header">POWERZONE VIP PASS ⚡</div>
+        <div class="ticket-code">PZ-2026-X99</div>
+        <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--neon-cyan); margin-bottom: 8px;">
+          ACCESO COMPLETO: SALA PESAS + HYROX + SPA
+        </div>
+        <div style="font-size: 0.72rem; color: var(--color-text-muted);">
+          VÁLIDO POR: 24 HORAS DESDE LA EMISIÓN
+        </div>
+      </div>
+
+      <button id="btn-confirm-ticket" class="btn btn-primary btn-block">
+        <i class="fa-solid fa-download"></i> GUARDAR EN MI WALLET
+      </button>
+    </div>
+  </div>
+
+  <!-- WhatsApp Floating Contact Button -->
+  <a href="https://wa.me/573133340054?text=Hola%20Powerzone%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20planes%20y%20clases."
+     class="whatsapp-float-btn" target="_blank" rel="noopener noreferrer" aria-label="Chatea con nosotros por WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
   <!-- Scripts -->
+  <script src="js/particles.js"></script>
   <script src="js/ecg-wave.js"></script>
   <script src="js/app.js"></script>
 </body>

@@ -3608,21 +3608,27 @@ input, select, textarea {
     grid-template-columns: 1fr;
   }
 
-  /* .hero-visual is a row-direction flex container. .hero-floating-card
-     switching to position:relative below turns it into a real in-flow flex
-     item alongside .hero-image-frame — without column direction the two
-     compete for width in the same row, squeezing the photo down to a
-     sliver instead of stacking. */
-  .hero-visual {
-    flex-direction: column;
+  /* Keep the floating card layered over the photo (same "collage" look as
+     desktop) instead of pushing it into its own block below — just pull
+     its desktop offsets (bottom:-30px; left:-40px; width:320px, which hang
+     it off the LEFT edge of a much wider column) in to stay inside the
+     narrower mobile image instead of overflowing the viewport. */
+  .hero-floating-card {
+    left: 16px;
+    right: 16px;
+    bottom: auto;
+    top: 96px;
+    width: auto;
+    padding: 18px;
   }
 
-  .hero-floating-card {
-    position: relative;
-    bottom: auto;
-    left: auto;
-    margin-top: 20px;
-    width: 100%;
+  /* The card's full content (score ring + 3 bars + ECG waveform) is taller
+     than the mobile image itself, which left no room for it to sit below
+     .hero-mini-pill without the two colliding. The ECG strip is the most
+     decorative/least essential piece, so drop it here to let the card fit
+     entirely below the kcal pill instead of overlapping it. */
+  .card-pulse-container {
+    display: none;
   }
 
   /* .hero-image-frame has a fixed height:520px sized for the desktop

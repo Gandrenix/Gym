@@ -2162,9 +2162,27 @@ input, select, textarea {
   gap: 40px;
 }
 
+/* Grid items default to min-width:auto, which floors them at their content's
+   intrinsic width. On this page that content includes things that don't
+   shrink or wrap on their own (a 580px-min schedule table, unwrapped case
+   pills, a 4-column metrics grid) — without min-width:0 those items force
+   their whole grid track wider than the viewport, blowing out the container
+   and causing real horizontal overflow on narrow phones even though every
+   section's own width reports correctly. */
+.hero-container > *,
+.goals-grid-layout > *,
+.method-layout > *,
+.trans-schedule-grid > *,
+.app-pricing-grid > *,
+.zone-display-card > *,
+.cta-banner-card > * {
+  min-width: 0;
+}
+
 /* Transformations Area with Multi-Case Selector */
 .trans-case-pills {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 18px;
 }
@@ -3543,6 +3561,7 @@ input, select, textarea {
   font-weight: 900;
   color: #ffffff;
   margin: 6px 0;
+  overflow-wrap: break-word;
 }
 
 .modal-sub {
@@ -3589,12 +3608,44 @@ input, select, textarea {
     grid-template-columns: 1fr;
   }
 
+  /* .hero-visual is a row-direction flex container. .hero-floating-card
+     switching to position:relative below turns it into a real in-flow flex
+     item alongside .hero-image-frame — without column direction the two
+     compete for width in the same row, squeezing the photo down to a
+     sliver instead of stacking. */
+  .hero-visual {
+    flex-direction: column;
+  }
+
   .hero-floating-card {
     position: relative;
     bottom: auto;
     left: auto;
     margin-top: 20px;
     width: 100%;
+  }
+
+  /* .hero-image-frame has a fixed height:520px sized for the desktop
+     column's ~440px width (a natural, mild portrait ratio). Once the
+     column goes full-width on narrower viewports that same fixed height
+     turns the photo into an exaggerated tall strip. Switching to
+     aspect-ratio keeps the crop proportional at any width instead. */
+  .hero-image-frame {
+    height: auto;
+    aspect-ratio: 4 / 5;
+  }
+
+  /* .hero-mini-pill is positioned with top:40px/right:-25px to sit just
+     off the image's top-right corner, which only works while
+     .hero-floating-card is absolutely positioned over the bottom-left of
+     the same image (desktop). Once the floating card drops into normal
+     flow below the image (this breakpoint), the pill's negative right
+     offset and lack of z-index let it drift over — and under — the card
+     instead. Pull it fully inside the image and force it above the card. */
+  .hero-mini-pill {
+    top: 16px;
+    right: 16px;
+    z-index: 6;
   }
 
   .trans-schedule-grid {
@@ -3651,7 +3702,7 @@ input, select, textarea {
 
   .hero-section {
     padding-top: 120px;
-    padding-bottom: 60px;
+    padding-bottom: 32px;
     min-height: auto;
   }
 
@@ -3663,12 +3714,27 @@ input, select, textarea {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  /* 60px (old hero bottom padding) + 70px (next section's top padding)
+     stacked into one bare gradient-to-white handoff read as a big dead
+     gap between the hero card and the next section's heading. */
   .section {
-    padding: 70px 0;
+    padding: 52px 0;
   }
 
   .section-title {
     font-size: 2.1rem;
+  }
+
+  .modal-dialog {
+    padding: 24px;
+  }
+
+  .modal-title {
+    font-size: 1.4rem;
+  }
+
+  .modal-overlay {
+    padding: 14px;
   }
 
   .calc-grid {
@@ -3689,6 +3755,25 @@ input, select, textarea {
 
   .comm-chall-grid {
     grid-template-columns: 1fr;
+  }
+
+  .trans-metrics-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .trans-compare-box {
+    height: 260px;
+  }
+
+  /* These pair a text block with a button/nav-buttons via
+     justify-content:space-between and no wrap — on narrow screens the
+     second item gets squeezed down to a sliver, forcing its text onto
+     several lines and turning a pill button into a misshapen blob.
+     Stacking avoids the squeeze entirely. */
+  .coaches-header, .testimonials-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
   }
 
   .footer-container {
